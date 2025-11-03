@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="description" content="Urgence Ostéopathe à Dourges - Christophe Bonnet Ostéopathe D.O. Consultations rapides week-end et jours fériés. Ostéopathie adulte, enfant, sportif à Dourges, Hénin-Beaumont, Noyelles-Godault.">
+<meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Hénin-Beaumont, ostéopathie week-end, ostéopathe sportif, douleur dos, ostéopathe dimanche, ostéopathe Nord Pas-de-Calais">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urgences Ostéopathiques - Christophe Bonnet Ostéopathe D.O.</title>
+
+  <!-- 🧭 Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-128715');  // ← remplace ici par ton vrai identifiant Analytics
+  </script>
+
+  <style>
+    :root {
+      --text: #3b2f2f;
+      --accent: #c29e6c;
+    }
+
+   body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: url('fond-vase.png') no-repeat center center;
+  background-size: cover; /* ✅ S’adapte à tous les écrans */
+  background-attachment: fixed; /* ✅ Effet de fond fixe sur PC */
+  background-color: #f7f3ee;
+  line-height: 1.6;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* ✅ Correction spécifique pour les smartphones */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Sur mobile, évite le bug de zoom du fond */
+    background-size: cover; /* Le fond remplit toujours l’écran */
+    background-position: center top;
+  }
+}
+
+
+    /* 🔒 Fenêtre de mot de passe */
+    #login {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(255,255,255,0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      text-align: center;
+    }
+
+    #login h2, #login p { color: var(--text); }
+    #login input {
+      padding: 10px 16px;
+      font-size: 1rem;
+      border: 1px solid #c29e6c;
+      border-radius: 8px;
+      margin-top: 5px;
+      outline: none;
+      text-align: center;
+    }
+    #login button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 50px;
+      margin-top: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    #login button:hover { background-color: #b98b54; }
+
+    /* ---- Contenu ---- */
+    header {
+      padding: 40px 20px 10px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(1.5px);
+      border-radius: 16px;
+      margin: 30px auto 10px;
+      display: inline-block;
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    header h2 {
+      font-size: 1.25rem;
+      margin-top: 8px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .portrait {
+  width: 220px;          /* ✅ Taille augmentée pour un meilleur rendu sur ordinateur */
+  height: 260px;
+  border-radius: 50%;    /* Garde la forme circulaire */
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 10;
+}
+
+/* ✅ Taille adaptée automatiquement sur mobile */
+@media (max-width: 480px) {
+  .portrait {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(2px);
+      border-radius: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    p { margin: 10px 0; }
+
+    a.bouton {
+      display: inline-block;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      margin: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    a.bouton:hover { background-color: #b98b54; transform: scale(1.05); }
+
+    .formation {
+      text-align: left;
+      margin-top: 20px;
+      line-height: 1.7;
+      background: rgba(255,255,255,0.25);
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* ✅ Colonne vertébrale */
+    .colonne {
+      position: fixed;
+      left: 1%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100vh;
+      opacity: 1.1;
+      z-index: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #6b5e53;
+      background: rgba(255,255,255,0.15);
+      margin-top: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    @media (max-width: 480px) {
+      .colonne { display: none; }
+      header h1 { font-size: 1.4rem; }
+      header h2 { font-size: 1rem; }
+      .portrait { width: 130px; height: 130px; }
+      main { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔒 Écran de connexion -->
+  <div id="login">
+    <h2>🔒 Accès sécurisé</h2>
+    <p>Entrez le mot de passe pour accéder au site :</p>
+    <input type="password" id="password" placeholder="Mot de passe" autocomplete="current-password">
+    <button id="enterBtn">Entrer</button>
+  </div>
+
+  <!-- 🌿 Contenu du site -->
+  <div id="content" style="display:none;">
+    <img src="colonne.png" alt="Colonne vertébrale" class="colonne">
+
+    <header>
+      <h1>Urgence Ostéopathe<h1>
+<h1>Consultations rapides - Week-ends et Jours fériés</h1>
+      <h2>Christophe BONNET Ostéopathe D.O.</h2>
+    </header>
+
+    <img src="portrait.jpg" alt="Portrait Christophe Bonnet" class="portrait">
+
+    <main>
+      <section>
+        <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
+        <p><strong>Téléphone ou SMS :</strong> <a href="tel:0767940304">07 67 94 03 04</a></p>
+        <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés sur rendez-vous</p>
+        <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
+        <p><strong>Tarif :</strong> 90 € avec facture pour remboursement auprés de votre mutuelle</p>
+        <p><strong>22 ans d'expérience pour vous accompagner</strong></p>
+      </section>
+
+      <section class="formation">
+        <h2>MA FORMATION</h2>
+        <p><strong>✦ Diplômé d’Ostéopathie D.O. dilpômé de l'Institut Franco-Britannique d'Ostéopathie & de l'Institut Spérieur du Grand Montpelier</strong></p>
+        <p><strong>✦ Masseur-kinésithérapeute diplômé de l'Université Libre de Bruxelles</strong></p>
+        <p><strong>✦ Master en Sciences et Techniques des Activités Physiques et Sportives à l’Université de Nice Sophia Antipolis</strong></p>
+        <p><strong>➤ Prise en charge : adultes, enfants, sportifs de haut niveau et sportifs amateurs (course à pied,  triathlon, cyclisme, boxe, tennis, sports collectifs...)</strong></p>
+      </section>
+
+      <a class="bouton" href="tel:0769930304">📞 Appeler maintenant ou envoyer un SMS</a>
+
+      <div class="boutons-itineraires">
+        <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">
+          🗺️ Itinéraire Google Maps
+        </a>
+        <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">
+          🚗 Itinéraire Waze
+        </a>
+      </div>
+
+      <footer>
+        <p>© 2025 Christophe Bonnet D.O. — Urgences Ostéopathiques Dourges</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- 🔐 Script de sécurité (mot de passe haché) -->
+<script>
+  const loginDiv = document.getElementById("login");
+  const contentDiv = document.getElementById("content");
+  const input = document.getElementById("password");
+  const button = document.getElementById("enterBtn");
+
+  // Hachage SHA-256 de "Socrate1201*"
+  const storedHash = "ffd040a97cccef0376c5cf9cebef1245b02754d06b906617646305ff461e04f1";
+
+  async function hashPassword(password) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  async function checkPassword() {
+    const entered = input.value.trim();
+    const hashed = await hashPassword(entered);
+    if (hashed === storedHash) {
+      loginDiv.style.display = "none";
+      contentDiv.style.display = "block";
+    } else {
+      alert("❌ Mot de passe incorrect");
+      input.value = "";
+    }
+  }
+
+  button.addEventListener("click", checkPassword);
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") checkPassword();
+  });
+</script>
+
+</body>
+</html>
+
+
+
