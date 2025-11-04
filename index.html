@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Meta charset en premier -->
+  <!-- 🔤 Encodage et affichage -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Urgences Ostéopathiques - Christophe Bonnet Ostéopathe D.O.</title>
+  <!-- 🧭 Informations de base -->
+  <title>Urgence Ostéopathe à Dourges - Christophe Bonnet Ostéopathe D.O.</title>
   <meta name="description" content="Urgence Ostéopathe à Dourges - Christophe Bonnet Ostéopathe D.O. Consultations rapides week-end et jours fériés. Ostéopathie adulte, enfant, sportif à Dourges, Hénin-Beaumont, Noyelles-Godault.">
-  <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Hénin-Beaumont, ostéopathie week-end, ostéopathe sportif, douleur dos, ostéopathe dimanche, ostéopathe Nord Pas-de-Calais">
-  <!-- Ajoute une balise canonical si nécessaire -->
-  <!-- <link rel="canonical" href="https://example.com/ton-url-canonique"> -->
+  <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Hénin-Beaumont, ostéopathie week-end, ostéopathe sportif, douleur dos, ostéopathe dimanche, ostéopathe Nord Pas-de-Calais, ostéopathe à Dourges, ostéopathie adulte enfant sportif, ostéopathe ouvert le week-end, consultation ostéopathie rapide, cabinet ostéopathie Dourges, ostéopathe douleur cervicale migraine stress">
+  <meta name="author" content="Christophe Bonnet, Ostéopathe D.O. à Dourges">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- 🧩 Canonical (évite le contenu dupliqué) -->
+  <link rel="canonical" href="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/">
 
-  gtag('config', 'G-Y214THWY8S');
-</script>
+  <!-- 🧠 Open Graph (partage Facebook / LinkedIn) -->
+  <meta property="og:title" content="Urgences Ostéopathiques - Christophe Bonnet Ostéopathe D.O. à Dourges">
+  <meta property="og:description" content="Consultations urgentes week-end et jours fériés à Dourges. Ostéopathie adulte, enfant, sportif.">
+  <meta property="og:image" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/portrait.jpg">
+  <meta property="og:url" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <!-- 🚀 Cache (accélère le chargement) -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
+
+  <!-- 📊 Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y214THWY8S');
+  </script>
+
+  <!-- 🎨 Style principal -->
   <style>
     :root {
       --text: #3b2f2f;
@@ -48,7 +62,7 @@
       }
     }
 
-    /* Fenêtre de mot de passe */
+    /* 🔒 Fenêtre de mot de passe */
     #login {
       position: fixed;
       inset: 0;
@@ -84,6 +98,19 @@
       transition: background-color 0.3s ease;
     }
     #login button:hover { background-color: #b98b54; }
+
+    /* 🧭 Accessibilité : texte caché visuellement mais lisible par lecteur d’écran */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
 
     header {
       padding: 40px 20px 10px;
@@ -163,14 +190,13 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    /* Colonne vertébrale */
     .colonne {
       position: fixed;
       left: 1%;
       top: 50%;
       transform: translateY(-50%);
       height: 100vh;
-      opacity: 0.12; /* corrigé (valeur entre 0 et 1) */
+      opacity: 0.12;
       z-index: 0;
     }
 
@@ -196,25 +222,21 @@
 </head>
 <body>
 
-  <!-- Écran de connexion : rôle/accessibilité ajoutés -->
+  <!-- 🔐 Fenêtre de connexion -->
   <div id="login" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
     <h2 id="loginTitle">🔒 Accès sécurisé</h2>
     <p>Entrez le mot de passe pour accéder au site :</p>
-    <!-- label pour accessibilité -->
     <label for="password" class="visually-hidden">Mot de passe</label>
     <input type="password" id="password" aria-label="Mot de passe" placeholder="Mot de passe" autocomplete="current-password">
     <button id="enterBtn">Entrer</button>
   </div>
 
-  <!-- Contenu du site (masqué tant que pas autorisé) -->
+  <!-- 🌿 Contenu principal -->
   <div id="content" style="display:none;">
     <img src="colonne.png" alt="Colonne vertébrale" class="colonne" width="120" height="800">
 
     <header>
-      <h1>
-        Urgence Ostéopathe<br>
-        Consultations rapides<span style="white-space: nowrap;"> <br>Week-ends et Jours fériés</span>
-      </h1>
+      <h1>Urgence Ostéopathe<br>Consultations rapides<br><span style="white-space: nowrap;">Week-ends et Jours fériés</span></h1>
       <h2>Christophe BONNET Ostéopathe D.O.</h2>
     </header>
 
@@ -227,7 +249,7 @@
         <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés sur rendez-vous</p>
         <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
         <p><strong>Tarif :</strong> 90 € avec facture pour remboursement auprès de votre mutuelle</p>
-        <p><strong>22 ans d'expérience pour vous accompagner</strong></p>
+        <p><strong>22 ans d'expérience en ostéopathie</strong> pour vous accompagner rapidement en cas de douleur aiguë : dos, cervicales, migraines, stress ou blessures sportives.</p>
       </section>
 
       <section class="formation">
@@ -255,16 +277,13 @@
     </main>
   </div>
 
-  <!-- Script de sécurité (client-side) -->
+  <!-- 🔐 Script d’accès -->
   <script>
     const loginDiv = document.getElementById("login");
     const contentDiv = document.getElementById("content");
     const input = document.getElementById("password");
     const button = document.getElementById("enterBtn");
 
-    // ATTENTION : authentification côté client = faible sécurité.
-    // Stocker un hash dans le code côté client n'est pas sécurisé.
-    // Recommandation : déplacer l'authentification côté serveur (htpasswd / middleware).
     const storedHash = "ffd040a97cccef0376c5cf9cebef1245b02754d06b906617646305ff461e04f1";
 
     async function hashPassword(password) {
@@ -277,7 +296,6 @@
 
     async function checkPassword() {
       const entered = input.value.trim();
-      // Ne pas laisser de mot de passe en clair dans le code
       const hashed = await hashPassword(entered);
       if (hashed === storedHash) {
         loginDiv.style.display = "none";
@@ -289,7 +307,6 @@
     }
 
     button.addEventListener("click", checkPassword);
-    // keypress est déprécié — utiliser keydown
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") checkPassword();
     });
@@ -297,6 +314,3 @@
 
 </body>
 </html>
-
-
-
