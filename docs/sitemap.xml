@@ -26,7 +26,8 @@
   <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
 
   <!-- 📊 Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
+  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -314,3 +315,4 @@
 
 </body>
 </html>
+
