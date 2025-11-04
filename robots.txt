@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/sitemap.xml
