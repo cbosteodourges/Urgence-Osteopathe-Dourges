@@ -11,10 +11,10 @@
   <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Hénin-Beaumont, ostéopathie week-end, ostéopathe sportif, douleur dos, ostéopathe dimanche, ostéopathe Nord Pas-de-Calais, ostéopathe à Dourges, ostéopathie adulte enfant sportif, ostéopathe ouvert le week-end, consultation ostéopathie rapide, cabinet ostéopathie Dourges, ostéopathe douleur cervicale migraine stress">
   <meta name="author" content="Christophe Bonnet, Ostéopathe D.O. à Dourges">
 
-  <!-- 🧩 Canonical (évite le contenu dupliqué) -->
+  <!-- 🧩 Canonical -->
   <link rel="canonical" href="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/">
 
-  <!-- 🧠 Open Graph (partage Facebook / LinkedIn) -->
+  <!-- 🧠 Open Graph -->
   <meta property="og:title" content="Urgences Ostéopathiques - Christophe Bonnet Ostéopathe D.O. à Dourges">
   <meta property="og:description" content="Consultations urgentes week-end et jours fériés exclusivement à Dourges. Ostéopathie adulte, enfant, sportif.">
   <meta property="og:image" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/portrait.jpg">
@@ -22,12 +22,11 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- 🚀 Cache (accélère le chargement) -->
+  <!-- 🚀 Cache -->
   <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
 
   <!-- 📊 Google Analytics -->
-  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -100,19 +99,6 @@
     }
     #login button:hover { background-color: #b98b54; }
 
-    /* 🧭 Accessibilité : texte caché visuellement mais lisible par lecteur d’écran */
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      border: 0;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      white-space: nowrap;
-    }
-
     header {
       padding: 40px 20px 10px;
       background: rgba(255,255,255,0.25);
@@ -129,6 +115,8 @@
       margin: 0;
       text-transform: uppercase;
       color: var(--text);
+      line-height: 1.3;
+      word-wrap: break-word;
     }
 
     header h2 {
@@ -136,6 +124,25 @@
       margin-top: 8px;
       font-weight: 600;
       color: var(--accent);
+    }
+
+    .titre-mobile {
+      display: inline-block;
+    }
+
+    /* ✅ Correction spéciale smartphone */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        white-space: normal;
+      }
+      .titre-mobile {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.3;
+        white-space: normal;
+      }
     }
 
     .portrait {
@@ -165,8 +172,6 @@
       z-index: 10;
     }
 
-    p { margin: 10px 0; }
-
     a.bouton {
       display: inline-block;
       background-color: var(--accent);
@@ -179,6 +184,7 @@
       font-size: 1rem;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
     a.bouton:hover { background-color: #b98b54; transform: scale(1.05); }
 
     .formation {
@@ -214,7 +220,7 @@
 
     @media (max-width: 480px) {
       .colonne { display: none; }
-      header h1 { font-size: 1.4rem; }
+      header h1 { font-size: 1.3rem; }
       header h2 { font-size: 1rem; }
       .portrait { width: 130px; height: 130px; }
       main { padding: 15px; }
@@ -238,12 +244,10 @@
 
     <header>
       <h1>
-  Urgence Ostéopathe<br>
-  Consultations rapides<br>
-  Week-ends et Jours fériés<br>
-  <span style="font-size: 1rem; color: #c29e6c;">exclusivement</span>
-</h1>
-
+        Urgence Ostéopathe<br>
+        Consultations rapides<br>
+        <span class="titre-mobile">Week-ends et Jours fériés exclusivement</span>
+      </h1>
       <h2>Christophe BONNET Ostéopathe D.O.</h2>
     </header>
 
@@ -321,6 +325,3 @@
 
 </body>
 </html>
-
-
-
