@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- 🧭 CONFIGURATION DE BASE -->
+  <!-- 🔤 Encodage et affichage -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 🔍 SEO PRINCIPAL -->
+  <!-- 🧭 Informations de base (SEO) -->
   <title>Urgence Ostéopathe Dourges | Consultation Rapide Week-end et Jours Fériés - Christophe Bonnet D.O.</title>
   <meta name="description" content="Besoin d'un ostéopathe en urgence à Dourges ? Christophe Bonnet, Ostéopathe D.O., vous reçoit rapidement les week-ends et jours fériés. Consultations pour adultes, enfants et sportifs à Dourges, Hénin-Beaumont, Noyelles-Godault et environs.">
-  <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Dourges week-end, ostéopathe Hénin-Beaumont, ostéopathe Noyelles-Godault, consultation ostéopathie rapide, ostéopathe dimanche Nord, douleur dos, cervicale, migraine, ostéopathe sportif Dourges, ostéopathe ouvert jours fériés, ostéopathie adulte enfant sportif">
+  <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Dourges week-end, ostéopathe Hénin-Beaumont, ostéopathe Noyelles-Godault, consultation ostéopathie rapide, ostéopathe dimanche Nord, douleur dos, cervicale, migraine, ostéopathe sportif Dourges, ostéopathe ouvert jours fériés">
   <meta name="author" content="Christophe Bonnet, Ostéopathe D.O. à Dourges">
 
-  <!-- 📍 GÉOLOCALISATION -->
+  <!-- 📍 Local -->
   <meta name="geo.region" content="FR-HDF">
   <meta name="geo.placename" content="Dourges">
   <meta name="geo.position" content="50.4406;2.9967">
   <meta name="ICBM" content="50.4406, 2.9967">
 
-  <!-- 🎨 COULEUR & FAVICON -->
+  <!-- 🎨 Favicon & thème -->
   <meta name="theme-color" content="#c29e6c">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="canonical" href="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/">
 
-  <!-- 🌐 MÉTADONNÉES SOCIALES (partage Facebook / Twitter) -->
+  <!-- 🌐 Open Graph -->
   <meta property="og:title" content="Urgences Ostéopathiques - Christophe Bonnet Ostéopathe D.O. à Dourges">
   <meta property="og:description" content="Consultations urgentes week-end et jours fériés exclusivement à Dourges. Ostéopathie adulte, enfant, sportif.">
   <meta property="og:image" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/portrait.jpg">
@@ -30,7 +30,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- 📊 GOOGLE ANALYTICS -->
+  <!-- 📊 Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y214THWY8S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,7 +39,7 @@
     gtag('config', 'G-Y214THWY8S');
   </script>
 
-  <!-- 📌 DONNÉES STRUCTURÉES (SEO LOCAL GOOGLE) -->
+  <!-- 📌 Données structurées (schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,20 +62,18 @@
     },
     "openingHours": "Sa-Su 09:00-19:00",
     "priceRange": "€€",
-    "description": "Ostéopathe D.O. à Dourges, consultations rapides les week-ends et jours fériés exclusivement. Spécialiste adulte, enfant, sportif.",
-    "sameAs": [
-      "https://www.google.com/maps/place/Christophe+Bonnet+Ostéopathe+Dourges"
-    ]
+    "description": "Ostéopathe D.O. à Dourges, consultations rapides les week-ends et jours fériés exclusivement. Spécialiste adulte, enfant, sportif."
   }
   </script>
 
-  <!-- 🎨 STYLE CSS PRINCIPAL -->
+  <!-- 🎨 Styles -->
   <style>
     :root {
       --text: #3b2f2f;
       --accent: #c29e6c;
     }
 
+    /* Corps */
     body {
       margin: 0;
       font-family: "Segoe UI", Roboto, sans-serif;
@@ -89,6 +87,7 @@
       overflow-x: hidden;
     }
 
+    /* mobile background tweak */
     @media (max-width: 768px) {
       body {
         background-attachment: scroll;
@@ -97,44 +96,7 @@
       }
     }
 
-    /* 🔒 Fenêtre de mot de passe */
-    #login {
-      position: fixed;
-      inset: 0;
-      background-color: rgba(255,255,255,0.8);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      text-align: center;
-    }
-
-    #login input {
-      padding: 10px 16px;
-      border: 1px solid var(--accent);
-      border-radius: 8px;
-      margin-top: 5px;
-      text-align: center;
-    }
-
-    #login button {
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      padding: 10px 24px;
-      border-radius: 50px;
-      margin-top: 12px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s ease;
-    }
-
-    #login button:hover {
-      background-color: #b98b54;
-    }
-
+    /* Header */
     header {
       padding: 40px 20px 10px;
       background: rgba(255,255,255,0.25);
@@ -153,7 +115,10 @@
       color: var(--text);
       line-height: 1.3;
       word-wrap: break-word;
+      white-space: normal;
     }
+
+    header h1 small { display:block; font-size:0.8rem; margin-top:6px; color:var(--accent); font-weight:600; text-transform:none; }
 
     header h2 {
       font-size: 1.25rem;
@@ -162,13 +127,7 @@
       color: var(--accent);
     }
 
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.1rem;
-        line-height: 1.4;
-      }
-    }
-
+    /* Portrait */
     .portrait {
       width: 220px;
       height: 260px;
@@ -182,12 +141,10 @@
     }
 
     @media (max-width: 480px) {
-      .portrait {
-        width: 150px;
-        height: 150px;
-      }
+      .portrait { width: 150px; height: 150px; }
     }
 
+    /* Main card */
     main {
       max-width: 800px;
       margin: 0 auto;
@@ -199,6 +156,8 @@
       z-index: 10;
     }
 
+    p { margin: 10px 0; color:var(--text); }
+
     a.bouton {
       display: inline-block;
       background-color: var(--accent);
@@ -208,23 +167,22 @@
       border-radius: 50px;
       margin: 10px;
       font-weight: bold;
-      transition: 0.3s ease;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
-    a.bouton:hover {
-      background-color: #b98b54;
-      transform: scale(1.05);
-    }
+    a.bouton:hover { background-color: #b98b54; transform: scale(1.05); }
 
     .formation {
       text-align: left;
       margin-top: 20px;
+      line-height: 1.7;
       background: rgba(255,255,255,0.25);
       padding: 15px 25px;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
+    /* Colonne vertébrale */
     .colonne {
       position: fixed;
       left: 1%;
@@ -235,19 +193,23 @@
       z-index: 0;
     }
 
+    /* repositionnement pour tablettes / petits écrans */
     @media (max-width: 768px) {
       .colonne {
         position: absolute;
         right: 5%;
+        left: auto;
         top: 55%;
+        transform: translateY(-50%);
         height: 250px;
         opacity: 0.12;
       }
     }
 
+    /* si tu veux masquer sur très petits écrans : décommente la ligne ci-dessous
     @media (max-width: 480px) {
       .colonne { display: none; }
-    }
+    } */
 
     footer {
       text-align: center;
@@ -259,42 +221,43 @@
       position: relative;
       z-index: 10;
     }
+
+    /* force proper wrapping on very small screens (title) */
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.1rem; line-height: 1.35; white-space: normal; overflow-wrap: break-word; }
+      main { padding: 15px; }
+    }
   </style>
 </head>
-
 <body>
-  <!-- 🔐 FENÊTRE DE MOT DE PASSE -->
-  <div id="login">
-    <h2>🔒 Accès sécurisé</h2>
-    <p>Entrez le mot de passe pour accéder au site :</p>
-    <input type="password" id="password" placeholder="Mot de passe">
-    <button id="enterBtn">Entrer</button>
-  </div>
 
-  <!-- 🌿 CONTENU PRINCIPAL -->
-  <div id="content" style="display:none;">
-    <img src="colonne.png" alt="Colonne vertébrale" class="colonne">
+  <!-- 🌿 CONTENU PRINCIPAL (PUBLIC) -->
+  <div id="content">
+    <!-- colonne vertébrale décorative -->
+    <img src="colonne.png" alt="Colonne vertébrale" class="colonne" width="120" height="800">
 
+    <!-- entête -->
     <header>
       <h1>
         Urgence Ostéopathe à Dourges<br>
         Consultations rapides<br>
-        <span class="titre-responsive">Week-ends et Jours fériés exclusivement</span><br>
+        <span style="display:block;">Week-ends et Jours fériés exclusivement</span>
         <small>Christophe Bonnet, Ostéopathe D.O.</small>
       </h1>
     </header>
 
-    <img src="portrait.jpg" alt="Portrait Christophe Bonnet" class="portrait">
+    <!-- portrait -->
+    <img src="portrait.jpg" alt="Portrait Christophe Bonnet" class="portrait" width="220" height="260">
 
+    <!-- contenu principal -->
     <main>
       <section>
-        <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 à Dourges</p>
-        <p><strong>Téléphone ou SMS :</strong> <a href="tel:0767940304">07 67 94 03 04</a></p>
-        <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés exclusivement </p>
+        <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
+        <p><strong>Téléphone / SMS :</strong> <a href="tel:+33767940304">07 67 94 03 04</a></p>
+        <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés — exclusivement sur rendez-vous</p>
         <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
-        <p><strong>Sur rendez-vous</strong></p>
-        <p><strong>Tarif :</strong> 90 € avec facture pour remboursement mutuelle</p>
-        <p><strong>22 ans d'expérience</strong> pour soulager les douleurs lombaires, dorsales, cervicales, migraines, troubles du sommeil, fatigue...</p>
+        <p><strong>Tarif :</strong> 90 € (facture fournie pour remboursement par la mutuelle)</p>
+        <p><strong>22 ans d'expérience</strong> pour soulager lombaires, dorsales, cervicales, migraines, troubles du sommeil et blessures sportives.</p>
       </section>
 
       <section class="formation">
@@ -302,14 +265,14 @@
         <p>✦ Diplômé d’Ostéopathie D.O. — Institut Franco-Britannique d'Ostéopathie & Institut Supérieur du Grand Montpellier</p>
         <p>✦ Masseur-kinésithérapeute — Université Libre de Bruxelles</p>
         <p>✦ Master STAPS — Université Nice Sophia Antipolis</p>
-        <p>➤ Prise en charge : adultes, enfants, sportifs (course à pied, triathlon, boxe, etc.)</p>
+        <p>➤ Prise en charge : adultes, enfants, sportifs (course à pied, triathlon, cyclisme, boxe, sports collectifs...)</p>
       </section>
 
-      <a class="bouton" href="tel:0767940304">📞 Appeler maintenant</a>
+      <a class="bouton" href="tel:+33767940304">📞 Appeler maintenant ou envoyer un SMS</a>
 
-      <div class="boutons-itineraires">
-        <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Itinéraire Google Maps</a>
-        <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Itinéraire Waze</a>
+      <div class="boutons-itineraires" style="margin-top:12px;">
+        <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank" rel="noopener noreferrer">🗺️ Itinéraire Google Maps</a>
+        <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank" rel="noopener noreferrer">🚗 Itinéraire Waze</a>
       </div>
 
       <footer>
@@ -319,34 +282,6 @@
     </main>
   </div>
 
-  <!-- 🔐 SCRIPT D’ACCÈS -->
-  <script>
-    const loginDiv = document.getElementById("login");
-    const contentDiv = document.getElementById("content");
-    const input = document.getElementById("password");
-    const button = document.getElementById("enterBtn");
-    const storedHash = "ffd040a97cccef0376c5cf9cebef1245b02754d06b906617646305ff461e04f1";
-
-    async function hashPassword(password) {
-      const data = new TextEncoder().encode(password);
-      const hash = await crypto.subtle.digest("SHA-256", data);
-      return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
-    }
-
-    async function checkPassword() {
-      const hashed = await hashPassword(input.value.trim());
-      if (hashed === storedHash) {
-        loginDiv.style.display = "none";
-        contentDiv.style.display = "block";
-      } else {
-        alert("❌ Mot de passe incorrect");
-        input.value = "";
-      }
-    }
-
-    button.addEventListener("click", checkPassword);
-    input.addEventListener("keydown", (e) => e.key === "Enter" && checkPassword());
-  </script>
-
+  <!-- (plus de script côté client - plus simple et indexable) -->
 </body>
 </html>
