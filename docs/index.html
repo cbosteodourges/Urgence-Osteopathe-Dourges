@@ -67,7 +67,50 @@
   </script>
 
   <!-- 🎨 Styles -->
+  
   <style>
+    /* =========================
+   FIX mobile / iOS safe-area
+   ========================= */
+
+/* Respecter la zone sûre (iPhone X+ et Safari) */
+html {
+  box-sizing: border-box;
+  background-color: #f7f3ee; /* couleur de fond de secours */
+}
+
+/* Appliquer le padding pour la safe-area (iOS) */
+body {
+  padding-top: env(safe-area-inset-top);
+  /* fallback ancien iOS */
+  padding-top: constant(safe-area-inset-top);
+  min-height: calc(100vh + env(safe-area-inset-top));
+}
+
+/* Sur petits écrans : ne pas utiliser background-attachment: fixed et positionner le fond en haut */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important; /* évite les recouvrements sur mobile */
+    background-position: center top !important; /* place le motif en haut */
+    background-size: cover !important;
+  }
+
+  /* S'assurer que l'en-tête reste visible sous la barre */
+  header {
+    margin-top: calc(12px + env(safe-area-inset-top));
+  }
+}
+
+/* Optionnel : si Safari iOS garde la barre, augmente légèrement le top de l'en-tête */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    header {
+      margin-top: max(12px, env(safe-area-inset-top));
+    }
+  }
+}
+
+    
     :root {
       --text: #3b2f2f;
       --accent: #c29e6c;
@@ -285,3 +328,4 @@
   <!-- (plus de script côté client - plus simple et indexable) -->
 </body>
 </html>
+
