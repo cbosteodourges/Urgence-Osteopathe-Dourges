@@ -68,33 +68,17 @@
 
   <!-- 🎨 Styles -->
   <style>
-    /* =========================
-       FIX mobile / iOS safe-area
-       ========================= */
     html { box-sizing: border-box; background-color: #f7f3ee; }
     body {
       padding-top: env(safe-area-inset-top);
       padding-top: constant(safe-area-inset-top);
       min-height: calc(100vh + env(safe-area-inset-top));
-    }
-    @media (max-width: 768px) {
-      body { background-attachment: scroll !important; background-position: center top !important; background-size: cover !important; }
-      header { margin-top: calc(12px + env(safe-area-inset-top)); }
-    }
-    @supports (padding: max(0px)) {
-      @media (max-width: 768px) { header { margin-top: max(12px, env(safe-area-inset-top)); } }
-    }
-
-    :root { --text: #3b2f2f; --accent: #c29e6c; }
-
-    body {
       margin: 0;
       font-family: "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
+      color: #3b2f2f;
       background: url('fond-vase.png') no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
-      background-color: #f7f3ee;
       line-height: 1.6;
       text-align: center;
       overflow-x: hidden;
@@ -117,26 +101,27 @@
       font-size: 2rem;
       margin: 0;
       text-transform: uppercase;
-      color: var(--text);
+      color: #3b2f2f;
       line-height: 1.3;
-      word-wrap: break-word;
-      white-space: normal;
     }
-    header h1 small { display:block; font-size:0.8rem; margin-top:6px; color:var(--accent); font-weight:600; text-transform:none; }
-    header h2 { font-size: 1.25rem; margin-top: 8px; font-weight: 600; color: var(--accent); }
+    header h1 small { display:block; font-size:0.8rem; margin-top:6px; color:#c29e6c; font-weight:600; text-transform:none; }
+    header h2 { font-size: 1.25rem; margin-top: 8px; font-weight: 600; color: #c29e6c; }
 
+    /* Portrait : plus grand, pas de bulle */
     .portrait {
-      width: 220px;
-      height: 260px;
-      border-radius: 50%;
-      object-fit: cover;
+      width: 350px;
+      height: auto;
+      border-radius: 0;
+      object-fit: contain;
       margin: 20px auto;
       display: block;
       box-shadow: 0 4px 10px rgba(0,0,0,0.35);
       position: relative;
       z-index: 10;
     }
-    @media (max-width: 480px) { .portrait { width: 150px; height: 150px; } }
+    @media (max-width: 480px) {
+      .portrait { width: 90%; height: auto; }
+    }
 
     main {
       max-width: 800px;
@@ -148,11 +133,11 @@
       position: relative;
       z-index: 10;
     }
-    p { margin: 10px 0; color:var(--text); }
+    p { margin: 10px 0; }
 
     a.bouton {
       display: inline-block;
-      background-color: var(--accent);
+      background-color: #c29e6c;
       color: white;
       text-decoration: none;
       padding: 12px 26px;
@@ -199,19 +184,16 @@
     }
 
     @media (max-width: 480px) {
-      header h1 { font-size: 1.1rem; line-height: 1.35; white-space: normal; overflow-wrap: break-word; }
+      header h1 { font-size: 1.1rem; line-height: 1.35; overflow-wrap: break-word; }
       main { padding: 15px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🌿 CONTENU PRINCIPAL (PUBLIC) -->
   <div id="content">
-    <!-- colonne vertébrale décorative -->
     <img src="colonne.png" alt="Colonne vertébrale" class="colonne" width="120" height="800">
 
-    <!-- entête -->
     <header>
       <h1>
         Urgence Ostéopathe à Dourges<br>
@@ -221,10 +203,9 @@
       </h1>
     </header>
 
-    <!-- portrait -->
+    <!-- Nouvelle photo -->
     <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet" class="portrait">
 
-    <!-- contenu principal -->
     <main>
       <section>
         <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
