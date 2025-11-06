@@ -67,7 +67,48 @@
   </script>
 
   <!-- 🎨 Styles -->
+  
   <style>
+
+    /* Fond : desktop fixe, mobile scrollable */
+body {
+  background: url('fond-vase.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* desktop */
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #3b2f2f;
+  line-height: 1.6;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important; /* mobile */
+    background-position: top center !important;
+    padding-top: 0; /* safe-area géré par header */
+  }
+
+  header {
+    margin-top: env(safe-area-inset-top); /* iOS */
+    position: sticky; /* reste visible */
+    top: 0;
+    z-index: 20;
+  }
+}
+
+/* Pour iOS anciens navigateurs */
+@supports (padding: max(0px)) {
+  @media (max-width: 768px) {
+    header {
+      margin-top: max(0px, env(safe-area-inset-top));
+    }
+  }
+}
+
+    
     html { box-sizing: border-box; background-color: #f7f3ee; }
     body {
       padding-top: env(safe-area-inset-top);
@@ -250,6 +291,7 @@
 
 </body>
 </html>
+
 
 
 
