@@ -39,94 +39,55 @@
     gtag('config', 'G-Y214THWY8S');
   </script>
 
-  <!-- 📌 Données structurées (schema.org) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Christophe Bonnet D.O. - Urgences Ostéopathiques Dourges",
-    "image": "https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/photo-site-urgence-osteo-dourges.png",
-    "url": "https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/",
-    "telephone": "+33767940304",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "44 chemin du Puits",
-      "addressLocality": "Dourges",
-      "postalCode": "62119",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 50.4406,
-      "longitude": 2.9967
-    },
-    "openingHours": "Sa-Su 09:00-19:00",
-    "priceRange": "€€",
-    "description": "Ostéopathe D.O. à Dourges, consultations rapides les week-ends et jours fériés exclusivement. Spécialiste adulte, enfant, sportif.",
-    "areaServed": [
-      {"@type": "City", "name": "Dourges"},
-      {"@type": "City", "name": "Hénin-Beaumont"},
-      {"@type": "City", "name": "Lens"},
-      {"@type": "City", "name": "Noyelles-Godault"},
-      {"@type": "City", "name": "Douai"},
-      {"@type": "City", "name": "Carvin"},
-      {"@type": "City", "name": "Courrières"},
-      {"@type": "City", "name": "Libercourt"}
-    ]
-  }
-  </script>
-
-  <!-- 📚 Données structurées FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Proposez-vous des consultations d'urgence le week-end et les jours fériés ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, Christophe Bonnet Ostéopathe D.O. à Dourges reçoit exclusivement sur rendez-vous les week-ends et jours fériés pour toute urgence ostéopathique."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quelles sont les zones d'intervention du cabinet ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le cabinet reçoit des patients venant de Dourges, Hénin-Beaumont, Lens, Noyelles-Godault, Douai, Carvin, Courrières et Libercourt."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quel est le tarif d'une consultation ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Le tarif d'une consultation est de 90 €, avec facture fournie pour remboursement par la mutuelle."
-        }
-      }
-    ]
-  }
-  </script>
-
   <!-- 🎨 Styles -->
   <style>
     body {
-      background: url('fond-vase.png') no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed;
-      min-height: 100vh;
       margin: 0;
       font-family: "Segoe UI", Roboto, sans-serif;
       color: #3b2f2f;
       line-height: 1.6;
       text-align: center;
       overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
     }
+
+    /* 🌿 Fond principal */
+    body::before {
+      content: "";
+      background: url('fond-vase.png') no-repeat center center fixed;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    /* 🦴 Colonne vertébrale */
+    .colonne {
+      position: fixed;
+      bottom: 5%;
+      left: 8%;
+      width: 8%;
+      max-width: 100px;
+      height: auto;
+      opacity: 0.85;
+      z-index: -1;
+    }
+
     @media (max-width: 768px) {
-      body { background-attachment: scroll; background-position: top center; }
+      .colonne {
+        position: fixed;
+        left: 4%;
+        bottom: 2%;
+        width: 15%;
+        max-width: 80px;
+        opacity: 0.8;
+      }
     }
+
     header {
       padding: 40px 20px 10px;
       background: rgba(255,255,255,0.25);
@@ -135,6 +96,7 @@
       margin: 30px auto 10px;
       display: inline-block;
     }
+
     header h1 {
       font-size: 2rem;
       margin: 0;
@@ -142,6 +104,7 @@
       color: #3b2f2f;
       line-height: 1.3;
     }
+
     header h1 small {
       display: block;
       font-size: 1.1rem;
@@ -150,6 +113,7 @@
       font-weight: 700;
       text-transform: none;
     }
+
     .portrait {
       width: 350px;
       height: auto;
@@ -157,6 +121,7 @@
       margin: 20px auto;
       display: block;
     }
+
     main {
       max-width: 800px;
       margin: 0 auto;
@@ -165,6 +130,7 @@
       backdrop-filter: blur(2px);
       border-radius: 20px;
     }
+
     a.bouton {
       display: inline-block;
       background-color: #c29e6c;
@@ -176,7 +142,12 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    a.bouton:hover { background-color: #b98b54; transform: scale(1.05); }
+
+    a.bouton:hover {
+      background-color: #b98b54;
+      transform: scale(1.05);
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -187,46 +158,43 @@
     }
   </style>
 </head>
+
 <body>
+  <img src="colonne.png" alt="Colonne vertébrale" class="colonne">
 
-  <div id="content">
-    <img src="colonne.png" alt="Colonne vertébrale" class="colonne" width="120" height="800">
+  <header>
+    <h1>
+      Urgence Ostéopathe à Dourges<br>
+      Consultations rapides<br>
+      <span style="display:block;">Week-ends et Jours fériés exclusivement</span>
+      <small>Christophe Bonnet, Ostéopathe D.O.</small>
+    </h1>
+  </header>
 
-    <header>
-      <h1>
-        Urgence Ostéopathe à Dourges<br>
-        Consultations rapides<br>
-        <span style="display:block;">Week-ends et Jours fériés exclusivement</span>
-        <small>Christophe Bonnet, Ostéopathe D.O.</small>
-      </h1>
-    </header>
+  <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet" class="portrait">
 
-    <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet" class="portrait">
+  <main>
+    <section>
+      <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
+      <p><strong>Téléphone / SMS :</strong> <a href="tel:+33767940304">07 67 94 03 04</a></p>
+      <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés — sur rendez-vous</p>
+      <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
+      <p><strong>Tarif :</strong> 90 € (facture fournie pour remboursement par la mutuelle)</p>
+      <p><strong>22 ans d'expérience</strong> pour soulager lombaires, dorsales, cervicales, migraines, troubles du sommeil et blessures sportives.</p>
+      <p>Le cabinet accueille également des patients venant de <strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>, <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>, <strong>Courrières</strong> et <strong>Libercourt</strong>.</p>
+    </section>
 
-    <main>
-      <section>
-        <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
-        <p><strong>Téléphone / SMS :</strong> <a href="tel:+33767940304">07 67 94 03 04</a></p>
-        <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés — sur rendez-vous</p>
-        <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
-        <p><strong>Tarif :</strong> 90 € (facture fournie pour remboursement par la mutuelle)</p>
-        <p><strong>22 ans d'expérience</strong> pour soulager lombaires, dorsales, cervicales, migraines, troubles du sommeil et blessures sportives.</p>
-        <p>Le cabinet accueille également des patients venant de <strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>, <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>, <strong>Courrières</strong> et <strong>Libercourt</strong>.</p>
-      </section>
+    <a class="bouton" href="tel:+33767940304">📞 Appeler maintenant ou envoyer un SMS</a>
 
-      <a class="bouton" href="tel:+33767940304">📞 Appeler maintenant ou envoyer un SMS</a>
+    <div class="boutons-itineraires" style="margin-top:12px;">
+      <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Itinéraire Google Maps</a>
+      <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Itinéraire Waze</a>
+    </div>
 
-      <div class="boutons-itineraires" style="margin-top:12px;">
-        <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Itinéraire Google Maps</a>
-        <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Itinéraire Waze</a>
-      </div>
-
-      <footer>
-        <p>Zones d'intervention : Dourges, Hénin-Beaumont, Lens, Douai, Carvin, Noyelles-Godault, Courrières, Libercourt.</p>
-        <p>© 2025 Christophe Bonnet D.O. — Urgences Ostéopathiques Dourges</p>
-      </footer>
-    </main>
-  </div>
-
+    <footer>
+      <p>Zones d'intervention : Dourges, Hénin-Beaumont, Lens, Douai, Carvin, Noyelles-Godault, Courrières, Libercourt.</p>
+      <p>© 2025 Christophe Bonnet D.O. — Urgences Ostéopathiques Dourges</p>
+    </footer>
+  </main>
 </body>
 </html>
