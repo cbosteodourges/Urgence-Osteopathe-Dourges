@@ -1,196 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Urgence Ostéopathe Dourges | Christophe Bonnet D.O.</title>
-  <meta name="description" content="Urgence ostéopathe Dourges - Consultations week-end et jours fériés. Christophe Bonnet, Ostéopathe D.O. - adultes, enfants, sportifs.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urgence Ostéopathe Dourges | Hénin-Beaumont, Lens, Douai, Carvin - Christophe Bonnet D.O.</title>
+  <meta name="description" content="Besoin d'un ostéopathe en urgence à Dourges, Hénin-Beaumont, Lens, Douai, Carvin ou alentours ? Christophe Bonnet, Ostéopathe D.O., reçoit rapidement les week-ends et jours fériés. Consultations pour adultes, enfants et sportifs.">
+  <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Hénin-Beaumont, ostéopathe Lens, ostéopathe Douai, ostéopathe Carvin, ostéopathe Noyelles-Godault, ostéopathe week-end, ostéopathe dimanche, ostéopathe jours fériés, douleur dos, migraine, sportif">
+  <meta name="author" content="Christophe Bonnet, Ostéopathe D.O. à Dourges">
+  <meta name="theme-color" content="#c29e6c">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/">
 
-  <!-- Open Graph (preview) -->
-  <meta property="og:title" content="Urgence Ostéopathe Dourges - Christophe Bonnet D.O.">
-  <meta property="og:description" content="Consultations urgentes week-end et jours fériés à Dourges et environs.">
-  <meta property="og:image" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/docs/photo-site-urgence-osteo-dourges.png">
-  <meta property="og:url" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Christophe Bonnet D.O. - Urgences Ostéopathiques Dourges",
-    "image":"https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/docs/photo-site-urgence-osteo-dourges.png",
-    "url":"https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/",
-    "telephone":"+33767940304",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"44 chemin du Puits",
-      "addressLocality":"Dourges",
-      "postalCode":"62119",
-      "addressCountry":"FR"
-    },
-    "geo": {"@type":"GeoCoordinates","latitude":50.4406,"longitude":2.9967},
-    "openingHours":"Sa-Su 09:00-19:00",
-    "priceRange":"€€",
-    "description":"Ostéopathe D.O. à Dourges, consultations rapides les week-ends et jours fériés."
-  }
-  </script>
-
-  <!-- Styles -->
   <style>
-    :root{
-      --accent:#c29e6c;
-      --text:#3b2f2f;
-      --muted:#6b5e53;
-      --card-bg: rgba(255,255,255,0.25);
-    }
-    html,body{height:100%; margin:0;}
-    body{
-      font-family:"Segoe UI", Roboto, sans-serif;
-      color:var(--text);
-      line-height:1.6;
-      text-align:center;
-      overflow-x:hidden;
-      min-height:100vh;
-      position:relative;
-      background-color:#f7f3ee; /* fallback if image missing */
-    }
-
-    /* background fixed (cover) */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background: url('fond-vase.png') no-repeat center center fixed;
+    body {
+      background: url('fond-vase.png') no-repeat center center;
       background-size: cover;
-      z-index:-3;
-      pointer-events:none;
+      background-attachment: fixed;
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      color: #3b2f2f;
+      line-height: 1.6;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    /* colonne fixe, derrière le contenu but above page background */
-    .colonne{
-      position:fixed;
-      left:8%;
-      bottom:12%;
-      width:12%;           /* % of viewport width */
-      max-width:220px;     /* prevents excessive size on large screens */
-      height:auto;
-      opacity:0.95;
-      z-index:-2;          /* behind main content */
-      pointer-events:none;
+    /* 🌿 Colonne vertébrale */
+    .colonne {
+      position: absolute;
+      top: 20px;            /* remonte légèrement */
+      left: 12%;
+      width: 180px;         /* taille augmentée */
+      height: auto;
+      opacity: 0.25;        /* plus visible */
+      z-index: 0;
     }
 
-    @media (max-width:768px){
-      .colonne{
-        left:4%;
-        bottom:6%;
-        width:20%;
-        max-width:140px;
-        opacity:0.9;
+    @media (max-width: 768px) {
+      body { background-attachment: scroll; background-position: top center; }
+      .colonne {
+        left: 5%;
+        width: 140px;
+        opacity: 0.18;      /* plus légère sur mobile */
       }
     }
 
-    header{
-      margin:28px auto 12px;
-      display:inline-block;
-      padding:28px 22px 12px;
-      background:var(--card-bg);
-      border-radius:16px;
+    header {
+      padding: 40px 20px 10px;
+      background: rgba(255,255,255,0.25);
       backdrop-filter: blur(1.5px);
-      z-index:10;
-      position:relative;
-    }
-    header h1{margin:0; font-size:1.9rem; text-transform:uppercase; color:var(--text);}
-    header h1 small{display:block; font-size:1.05rem; color:#8B5E3C; font-weight:700; margin-top:8px;}
-
-    /* portrait circle */
-    .portrait{
-      width:340px;
-      max-width:86%;
-      height:auto;
-      display:block;
-      margin:18px auto;
-      border-radius:50%;
-      box-shadow:0 6px 18px rgba(0,0,0,0.25);
-      border:6px solid rgba(194,158,108,0.9);
-      z-index:10;
-      position:relative;
-      background-color:#fff;
+      border-radius: 16px;
+      margin: 30px auto 10px;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
     }
 
-    main{
-      max-width:900px;
-      margin:18px auto 36px;
-      padding:20px;
-      background:var(--card-bg);
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      text-transform: uppercase;
+      color: #3b2f2f;
+      line-height: 1.3;
+    }
+
+    header h1 small {
+      display: block;
+      font-size: 1.1rem;
+      margin-top: 8px;
+      color: #8B5E3C;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .portrait {
+      width: 350px;
+      height: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+      margin: 20px auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.25);
       backdrop-filter: blur(2px);
-      border-radius:20px;
-      z-index:10;
-      position:relative;
+      border-radius: 20px;
+      position: relative;
+      z-index: 2;
     }
 
-    .bouton{
-      display:inline-block;
-      background-color:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      padding:12px 26px;
-      border-radius:999px;
-      margin:8px;
-      font-weight:700;
+    a.bouton {
+      display: inline-block;
+      background-color: #c29e6c;
+      color: white;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      margin: 10px;
+      font-weight: bold;
+      transition: 0.3s;
     }
-    .bouton:hover{transform:scale(1.03);}
+    a.bouton:hover { background-color: #b98b54; transform: scale(1.05); }
 
-    footer{
-      text-align:center;
-      padding:18px;
-      color:var(--muted);
-      font-size:0.95rem;
-      margin-bottom:36px;
-    }
-
-    /* responsive small tweaks */
-    @media (max-width:480px){
-      header{padding:18px 12px;}
-      header h1{font-size:1.15rem;}
-      .portrait{width:46vw; max-width:220px;}
-      main{padding:14px;}
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #6b5e53;
+      background: rgba(255,255,255,0.15);
+      margin-top: 20px;
     }
   </style>
 </head>
+
 <body>
+  <div id="content">
+    <img src="colonne.png" alt="Colonne vertébrale" class="colonne">
 
-  <!-- colonne fixed -->
-  <img src="docs/colonne.png" alt="" class="colonne" aria-hidden="true">
+    <header>
+      <h1>
+        Urgence Ostéopathe à Dourges<br>
+        Consultations rapides<br>
+        <span style="display:block;">Week-ends et Jours fériés exclusivement</span>
+        <small>Christophe Bonnet, Ostéopathe D.O.</small>
+      </h1>
+    </header>
 
-  <header>
-    <h1>
-      Urgence Ostéopathe à Dourges
-      <small>Consultations rapides — Week-ends & jours fériés</small>
-    </h1>
-  </header>
+    <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet" class="portrait">
 
-  <!-- portrait principal (doit être présent dans docs/) -->
-  <img src="docs/photo-site-urgence-osteo-dourges.png" alt="Portrait de Christophe Bonnet, Ostéopathe D.O. à Dourges" class="portrait">
+    <main>
+      <section>
+        <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
+        <p><strong>Téléphone / SMS :</strong> <a href="tel:+33767940304">07 67 94 03 04</a></p>
+        <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés — sur rendez-vous</p>
+        <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
+        <p><strong>Tarif :</strong> 90 € (facture fournie pour remboursement par la mutuelle)</p>
+        <p><strong>22 ans d'expérience</strong> pour soulager lombaires, dorsales, cervicales, migraines, troubles du sommeil et blessures sportives.</p>
+        <p>Le cabinet accueille également des patients venant de <strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>, <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>, <strong>Courrières</strong> et <strong>Libercourt</strong>.</p>
+      </section>
 
-  <main>
-    <section>
-      <p><strong>Adresse :</strong> 44 chemin du Puits, 62119 Dourges</p>
-      <p><strong>Téléphone / SMS :</strong> <a class="bouton" href="tel:+33767940304">📞 07 67 94 03 04</a></p>
-      <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés — sur rendez-vous</p>
-      <p><strong>Tarif :</strong> 90 € — facture fournit pour remboursement</p>
-      <p><strong>22 ans d'expérience</strong> — lombaires, cervicales, migraines, sportifs...</p>
-    </section>
+      <a class="bouton" href="tel:+33767940304">📞 Appeler maintenant ou envoyer un SMS</a>
 
-    <section style="margin-top:14px;">
-      <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank" rel="noopener noreferrer">🗺️ Itinéraire Google Maps</a>
-      <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank" rel="noopener noreferrer">🚗 Itinéraire Waze</a>
-    </section>
-  </main>
+      <div class="boutons-itineraires" style="margin-top:12px;">
+        <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Itinéraire Google Maps</a>
+        <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Itinéraire Waze</a>
+      </div>
 
-  <footer>
-    Zones d'intervention : Dourges, Hénin-Beaumont, Lens, Douai, Carvin, Noyelles-Godault, Courrières, Libercourt. • © 2025 Christophe Bonnet D.O.
-  </footer>
+      <footer>
+        <p>Zones d'intervention : Dourges, Hénin-Beaumont, Lens, Douai, Carvin, Noyelles-Godault, Courrières, Libercourt.</p>
+        <p>© 2025 Christophe Bonnet D.O. — Urgences Ostéopathiques Dourges</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
