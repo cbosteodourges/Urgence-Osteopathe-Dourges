@@ -27,24 +27,29 @@
     }
 
     /* 🌿 Colonne vertébrale */
-    .colonne {
-      position: absolute;
-      top: 20px;            /* remonte légèrement */
-      left: 12%;
-      width: 180px;         /* taille augmentée */
-      height: auto;
-      opacity: 0.25;        /* plus visible */
-      z-index: 0;
-    }
+   .colonne {
+  position: fixed;
+  bottom: 5%;
+  left: 8%;
+  width: 8%;
+  max-width: 100px;
+  height: auto;
+  opacity: 0.85;
+  z-index: -1;
+}
 
-    @media (max-width: 768px) {
-      body { background-attachment: scroll; background-position: top center; }
-      .colonne {
-        left: 5%;
-        width: 140px;
-        opacity: 0.18;      /* plus légère sur mobile */
-      }
-    }
+
+  @media (max-width: 768px) {
+  .colonne {
+    position: fixed;
+    left: 4%;
+    bottom: 2%;
+    width: 15%;
+    max-width: 80px;
+    opacity: 0.8;
+  }
+}
+
 
     header {
       padding: 40px 20px 10px;
@@ -160,4 +165,5 @@
   </div>
 </body>
 </html>
+
 
