@@ -66,49 +66,58 @@
   }
   </script>
 
+  <!-- 📖 Données structurées FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Êtes-vous disponible les jours fériés ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, uniquement sur rendez-vous, le week-end et les jours fériés, au cabinet de Dourges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faites-vous des consultations à domicile ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, uniquement au cabinet pour assurer des soins adaptés et sécurisés."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels types de douleurs traitez-vous en urgence ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les douleurs aiguës du dos, du cou, les blocages, les torticolis, les sciatiques, les migraines, ainsi que les blessures liées au sport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment prendre rendez-vous en urgence ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vous pouvez appeler ou envoyer un SMS au 07 67 94 03 04. Les rendez-vous d'urgence sont possibles le week-end et les jours fériés selon les disponibilités."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous sur les communes voisines ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, je reçois les patients venant de Dourges, Hénin-Beaumont, Noyelles-Godault, Montigny-en-Gohelle, Carvin, Courrières et Ostricourt."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- 🎨 Styles -->
-  
   <style>
-
-    /* Fond : desktop fixe, mobile scrollable */
-body {
-  background: url('fond-vase.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed; /* desktop */
-  min-height: 100vh;
-  margin: 0;
-  font-family: "Segoe UI", Roboto, sans-serif;
-  color: #3b2f2f;
-  line-height: 1.6;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll !important; /* mobile */
-    background-position: top center !important;
-    padding-top: 0; /* safe-area géré par header */
-  }
-
-  header {
-    margin-top: env(safe-area-inset-top); /* iOS */
-    position: sticky; /* reste visible */
-    top: 0;
-    z-index: 20;
-  }
-}
-
-/* Pour iOS anciens navigateurs */
-@supports (padding: max(0px)) {
-  @media (max-width: 768px) {
-    header {
-      margin-top: max(0px, env(safe-area-inset-top));
-    }
-  }
-}
-
-    
     html { box-sizing: border-box; background-color: #f7f3ee; }
     body {
       padding-top: env(safe-area-inset-top);
@@ -145,20 +154,17 @@ body {
       color: #3b2f2f;
       line-height: 1.3;
     }
-  header h1 small {
-  display: block;
-  font-size: 1.1rem;   /* un peu plus gros */
-  margin-top: 8px;
-  color: #8B5E3C;      /* marron chaud */
-  font-weight: 700;     /* bien visible */
-  text-transform: none;
-}
-
-}
+    header h1 small {
+      display: block;
+      font-size: 1.1rem;
+      margin-top: 8px;
+      color: #8B5E3C;
+      font-weight: 700;
+      text-transform: none;
+    }
 
     header h2 { font-size: 1.25rem; margin-top: 8px; font-weight: 600; color: #c29e6c; }
 
-    /* Portrait : plus grand, pas de bulle */
     .portrait {
       width: 350px;
       height: auto;
@@ -254,7 +260,6 @@ body {
       </h1>
     </header>
 
-    <!-- Nouvelle photo -->
     <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet" class="portrait">
 
     <main>
@@ -291,7 +296,3 @@ body {
 
 </body>
 </html>
-
-
-
-
