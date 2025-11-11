@@ -4,27 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Urgence Ostéopathe près d’Hénin-Beaumont | Dourges, Lens, Douai, Carvin - Christophe Bonnet D.O.</title>
-  <meta name="description" content="Besoin d’un ostéopathe en urgence près d’Hénin-Beaumont ? Christophe Bonnet, Ostéopathe D.O. à Dourges, consulte rapidement les week-ends et jours fériés.">
-  <meta name="keywords" content="urgence ostéopathe Hénin-Beaumont, ostéopathe près de Hénin-Beaumont, ostéopathe Dourges, ostéopathe Douai, ostéopathe Lens, ostéopathe Carvin, ostéopathe dimanche, ostéopathe jours fériés">
+  <title>Urgence Ostéopathe près d’Hénin-Beaumont | Christophe Bonnet D.O.</title>
+  <meta name="description" content="Besoin d'un ostéopathe en urgence près d’Hénin-Beaumont ? Christophe Bonnet, Ostéopathe D.O., reçoit rapidement les week-ends et jours fériés à Dourges. Consultations pour adultes, enfants et sportifs.">
+  <meta name="keywords" content="urgence ostéopathe Hénin-Beaumont, ostéopathe Hénin-Beaumont, ostéopathe Dourges, ostéopathe Lens, ostéopathe Douai, ostéopathe Carvin, ostéopathe week-end, ostéopathe dimanche, ostéopathe jours fériés">
   <meta name="author" content="Christophe Bonnet, Ostéopathe D.O. à Dourges">
 
   <meta name="theme-color" content="#c29e6c">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="canonical" href="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/urgence-osteopathe-henin-beaumont.html">
 
-  <!-- 🌐 Open Graph -->
   <meta property="og:title" content="Urgence Ostéopathe près d’Hénin-Beaumont | Christophe Bonnet D.O.">
-  <meta property="og:description" content="Consultations ostéopathiques rapides près d’Hénin-Beaumont, week-ends et jours fériés exclusivement.">
+  <meta property="og:description" content="Consultations ostéopathiques en urgence près d’Hénin-Beaumont. Week-ends et jours fériés exclusivement.">
   <meta property="og:image" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/photo-site-urgence-osteo-dourges.png">
   <meta property="og:url" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/urgence-osteopathe-henin-beaumont.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
 
-  <!-- 🐦 Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Urgence Ostéopathe près d’Hénin-Beaumont | Christophe Bonnet D.O.">
-  <meta name="twitter:description" content="Consultations ostéopathiques rapides près d’Hénin-Beaumont les week-ends et jours fériés.">
+  <meta name="twitter:description" content="Consultations ostéopathiques rapides près d’Hénin-Beaumont. Week-ends et jours fériés.">
   <meta name="twitter:image" content="https://cbosteodourges.github.io/Urgence-Osteopathe-Dourges/photo-site-urgence-osteo-dourges.png">
 
   <style>
@@ -36,8 +34,28 @@
       color: #3b2f2f;
       line-height: 1.6;
       text-align: center;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
     }
-
+    .colonne {
+      position: fixed;
+      bottom: 20%;
+      left: 7%;
+      width: 40%;
+      max-width: 260px;
+      height: auto;
+      z-index: 0;
+    }
+    .portrait {
+      width: 420px;
+      height: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+      margin: 20px auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
     header {
       padding: 40px 20px 10px;
       background: rgba(255,255,255,0.25);
@@ -46,7 +64,6 @@
       margin: 30px auto 10px;
       display: inline-block;
     }
-
     header h1 {
       font-size: 2rem;
       margin: 0;
@@ -54,7 +71,6 @@
       color: #3b2f2f;
       line-height: 1.3;
     }
-
     header h1 small {
       display: block;
       font-size: 1.2rem;
@@ -63,15 +79,6 @@
       font-weight: 700;
       text-transform: none;
     }
-
-    .portrait {
-      width: 420px;
-      height: auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-      margin: 20px auto;
-      display: block;
-    }
-
     main {
       max-width: 800px;
       margin: 0 auto;
@@ -79,23 +86,9 @@
       background: rgba(255,255,255,0.25);
       backdrop-filter: blur(2px);
       border-radius: 20px;
+      position: relative;
+      z-index: 2;
     }
-
-    .formation {
-      background-color: rgba(244, 233, 219, 0.9);
-      padding: 20px 24px;
-      border-radius: 14px;
-      margin-top: 25px;
-      text-align: left;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-
-    .formation h2 {
-      color: #7b4b2a;
-      text-align: center;
-      margin-bottom: 12px;
-    }
-
     a.bouton {
       display: inline-block;
       background-color: #c29e6c;
@@ -107,12 +100,18 @@
       font-weight: bold;
       transition: 0.3s;
     }
-
     a.bouton:hover {
       background-color: #b98b54;
       transform: scale(1.05);
     }
-
+    .formation {
+      background-color: rgba(244, 233, 219, 0.9);
+      padding: 20px 24px;
+      border-radius: 14px;
+      margin-top: 25px;
+      text-align: left;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -125,16 +124,18 @@
 </head>
 
 <body>
+  <img src="colonne.png" alt="Colonne vertébrale" class="colonne">
+
   <header>
     <h1>
       Urgence Ostéopathe près d’Hénin-Beaumont<br>
       Consultations rapides<br>
-      <span style="display:block;">Week-ends et Jours fériés exclusivement</span>
+      <span>Week-ends et Jours fériés exclusivement</span>
       <small>Christophe Bonnet, Ostéopathe D.O.</small>
     </h1>
   </header>
 
-  <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet Ostéopathe près d’Hénin-Beaumont" class="portrait">
+  <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait Christophe Bonnet" class="portrait">
 
   <main>
     <section>
@@ -142,29 +143,25 @@
       <p><strong>Téléphone / SMS :</strong> <a href="tel:+33767940304">07 67 94 03 04</a></p>
       <p><strong>Consultations :</strong> Samedi, dimanche et jours fériés — sur rendez-vous</p>
       <p><strong>Uniquement à mon cabinet sur Dourges</strong></p>
-      <p><strong>Tarif :</strong> 90 € (facture fournie pour remboursement par la mutuelle)</p>
-      <p><strong>22 ans d'expérience</strong> pour soulager lombaires, dorsales, cervicales, migraines, troubles du sommeil et blessures sportives.</p>
-
-      <section class="formation">
-        <h2>Ma formation</h2>
-        <p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’<strong>Institut Franco-Britannique d'Ostéopathie</strong> & de l’<strong>Institut Supérieur du Grand Montpellier</strong></p>
-        <p>✦ <strong>Masseur-kinésithérapeute</strong> — Université Libre de Bruxelles</p>
-        <p>✦ <strong>Master STAPS</strong> — Université Nice Sophia Antipolis</p>
-        <p>➤ <strong>Prise en charge :</strong> adultes, enfants et sportifs (course à pied, triathlon, boxe, etc.)</p>
-      </section>
-
-      <p>Le cabinet accueille également des patients venant de <strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>, <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>, <strong>Courrières</strong>, <strong>Libercourt</strong>, <strong>Arras</strong>, <strong>Lille</strong>…</p>
+      <p><strong>Tarif :</strong> 90 € (facture fournie pour remboursement mutuelle)</p>
+      <p><strong>22 ans d'expérience</strong> pour soulager lombaires, dorsales, cervicales, migraines et blessures sportives.</p>
+      <p>📍 Le cabinet se situe à seulement <strong>5 minutes d’Hénin-Beaumont</strong>, facilement accessible par la D919.</p>
     </section>
 
-    <a class="bouton" href="tel:+33767940304">📞 Appeler maintenant ou envoyer un SMS</a>
+    <section class="formation">
+      <h2 style="text-align:center; color:#7b4b2a;">Ma formation</h2>
+      <p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’Institut Franco-Britannique d'Ostéopathie & de l’Institut Supérieur du Grand Montpellier</p>
+      <p>✦ <strong>Masseur-kinésithérapeute</strong> — Université Libre de Bruxelles</p>
+      <p>✦ <strong>Master STAPS</strong> — Université Nice Sophia Antipolis</p>
+      <p>➤ <strong>Prise en charge :</strong> adultes, enfants, sportifs (course à pied, triathlon, boxe, etc.)</p>
+    </section>
 
-    <div style="margin-top:12px;">
-      <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Google Maps</a>
-      <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Waze</a>
-    </div>
+    <a class="bouton" href="tel:+33767940304">📞 Appeler maintenant</a>
+    <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Google Maps</a>
+    <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Waze</a>
 
     <footer>
-      <p>Zones d’intervention : Hénin-Beaumont, Dourges, Lens, Douai, Carvin, Noyelles-Godault, Courrières, Libercourt, Arras, Lille.</p>
+      <p>Zones d’intervention : Hénin-Beaumont, Dourges, Lens, Douai, Carvin, Noyelles-Godault, Libercourt, Arras, Lille.</p>
       <p>© 2025 Christophe Bonnet D.O. — Urgences Ostéopathiques Dourges</p>
     </footer>
   </main>
