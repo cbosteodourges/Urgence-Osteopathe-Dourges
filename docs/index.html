@@ -42,6 +42,36 @@
       position: relative;
     }
 
+    /* --- AJOUT : Badge Google 5 étoiles --- */
+    .google-badge {
+      position: fixed;
+      top: 25px;
+      left: 25px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 10px 14px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      backdrop-filter: blur(2px);
+    }
+    .google-badge img {
+      width: 95px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .google-badge {
+        top: 15px;
+        left: 15px;
+        padding: 7px 10px;
+      }
+      .google-badge img {
+        width: 75px;
+      }
+    }
+
     .colonne {
       position: fixed;
       bottom: 20%;
@@ -170,6 +200,11 @@
 
 <body>
 
+  <!-- AJOUT : Badge Google 5 étoiles -->
+  <div class="google-badge">
+    <img src="google-5-etoiles.png" alt="Avis Google 5 étoiles">
+  </div>
+
   <div id="content">
 
     <img src="colonne.png" alt="Colonne vertébrale stylisée" class="colonne">
@@ -191,7 +226,7 @@
         <p><strong>Téléphone / SMS :</strong> <a href="tel:+33767940304">07 67 94 03 04</a></p>
         <p><strong>Consultations :</strong> samedi, dimanche et jours fériés — uniquement sur rendez-vous</p>
         <p><strong>Consultation au cabinet de Dourges uniquement</strong></p>
-        <p><strong>Tarif :</strong> 70€ à 90€ selon jour de consultation (facture fournie pour remboursement mutuelle)</p>
+        <p><strong>Tarif :</strong> 60€ à 80€ selon jour de consultation (facture fournie pour remboursement auprés de votre mutuelle)</p>
         <p><strong>22 ans d'expérience</strong> dans la prise en charge des douleurs lombaires, dorsales, cervicales, migraines et troubles liés au sport.</p>
       </section>
 
@@ -205,7 +240,7 @@
 
         <h2 style="color:#7b4b2a; text-align:center; margin-bottom: 12px;">Ma formation</h2>
 
-        <p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’Institut Franco-Britannique d'Ostéopathie et de l’Institut Supérieur du Grand Montpellier</p>
+        <p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’Institut Franco-Britannique d'Ostéopathie et de l’Institut Supérieur d'Ostéopathie du Grand Montpellier</p>
         <p>✦ <strong>Masseur-kinésithérapeute</strong> — Université Libre de Bruxelles</p>
         <p>✦ <strong>Master STAPS</strong> — Université Nice Sophia Antipolis</p>
         <p>➤ <strong>Prise en charge :</strong> adultes, enfants, adolescents et sportifs</p>
