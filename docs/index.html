@@ -145,12 +145,59 @@
 
 <body>
 
-  <header>
-    <h1>
-      Christophe BONNET<br>
-      Ostéopathe D.O. – Consultations sur Hénin-Beaumont et Dourges
-    </h1>
-  </header>
+<header>
+  <h1 style="
+    color: #000000;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+  ">
+    <span class="titre-nom">Christophe BONNET</span><br>
+    <span class="titre-profession">Ostéopathe D.O.</span><br>
+    <span class="titre-lieu">Consultations sur Hénin-Beaumont et Dourges</span>
+  </h1>
+</header>
+
+<style>
+  /* Responsive pour le titre */
+  .titre-nom {
+    font-size: 2rem;
+  }
+
+  .titre-profession {
+    font-size: 1.6rem;
+  }
+
+  .titre-lieu {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .titre-nom {
+      font-size: 1.5rem;
+    }
+    .titre-profession {
+      font-size: 1.3rem;
+    }
+    .titre-lieu {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .titre-nom {
+      font-size: 1.8rem;
+    }
+    .titre-profession {
+      font-size: 1.5rem;
+    }
+    .titre-lieu {
+      font-size: 1.3rem;
+    }
+  }
+</style>
 
   <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait de Christophe Bonnet" class="portrait">
 
@@ -219,4 +266,5 @@
   </main>
 </body>
 </html>
+
 
