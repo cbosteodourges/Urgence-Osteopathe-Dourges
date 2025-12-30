@@ -12,6 +12,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="Favicon.png?v=1">
   <link rel="icon" type="image/png" sizes="192x192" href="Favicon.png?v=1">
 
+  <!-- Métadonnées SEO -->
+  <meta name="description" content="Besoin d'un ostéopathe en urgence à Dourges, Hénin-Beaumont, Lens, Douai ou Carvin ? Christophe Bonnet, Ostéopathe D.O., vous reçoit rapidement les week-ends et jours fériés. Prise en charge des douleurs aiguës, dos, cervicales, migraines, sportifs.">
+  <meta name="keywords" content="urgence ostéopathe Dourges, ostéopathe Hénin-Beaumont, ostéopathe Lens, ostéopathe Douai, ostéopathe Carvin, ostéopathe Noyelles-Godault, ostéopathe week-end, ostéopathe dimanche, ostéopathe jours fériés, douleur dos, torticolis, lumbago, migraines, sportif">
+  <meta name="author" content="Christophe Bonnet, Ostéopathe D.O.">
+  <meta name="theme-color" content="#c29e6c">
+  <link rel="canonical" href="https://osteopathe-urgence-59-62.fr">
+
   <style>
     body {
       background-color: #f4e9db; /* beige clair */
@@ -39,14 +46,14 @@
     header h1 {
       font-size: 2rem;
       margin: 0;
+      text-transform: uppercase;
       color: #7b4b2a; /* terracotta */
-      font-weight: 700;
       line-height: 1.5;
+      font-weight: 700;
     }
 
     .portrait {
       width: 420px;
-      max-width: 90%;
       height: auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.35);
       margin: 20px auto;
@@ -68,7 +75,6 @@
 
     a.bouton {
       display: inline-block;
-      background-color: #c29e6c;
       color: white;
       text-decoration: none;
       padding: 12px 26px;
@@ -78,9 +84,37 @@
       transition: 0.3s;
     }
 
-    a.bouton:hover {
+    /* Boutons Doctolib en bleu */
+    a.bouton.doctolib {
+      background-color: #2e77d0;
+    }
+
+    a.bouton.doctolib:hover {
+      background-color: #1b5fa7;
+      transform: scale(1.05);
+    }
+
+    /* Boutons Appel/Itinéraire */
+    a.bouton.telephone {
+      background-color: #c29e6c;
+    }
+
+    a.bouton.telephone:hover {
       background-color: #b98b54;
       transform: scale(1.05);
+    }
+
+    .itineraire {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .itineraire a {
+      flex: 1 1 200px;
+      max-width: 260px;
     }
 
     footer {
@@ -92,53 +126,15 @@
       margin-top: 20px;
     }
 
-    /* Zones d’urgence avec puces */
-    .zones-urgence {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 8px;
-      margin-top: 12px;
-      text-align: left;
-      padding: 0 12px;
-    }
-
-    .zones-urgence a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #7b4b2a;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .zones-urgence a:hover {
-      text-decoration: underline;
-    }
-
-    .zones-urgence a::before {
-      content: "●";
-      color: #7b4b2a;
-      font-size: 1rem;
-      margin-right: 8px;
-    }
-
-    .experience-section {
-      margin: 20px 0;
-      text-align: left;
-      padding: 20px 24px;
-      background-color: rgba(244, 233, 219, 0.9);
-      border-radius: 14px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-
-    .experience-section p {
-      margin: 8px 0;
+    @media (max-width: 768px) {
+      .portrait {
+        width: 80%;
+      }
     }
   </style>
 </head>
 
 <body>
-
   <div id="content">
 
     <header>
@@ -152,19 +148,18 @@
 
     <main>
       <section>
-        <a class="bouton" href="https://www.doctolib.fr/osteopathe/dourges/christophe-bonnet-dourges/booking/places?specialityId=2271&telehealth=false&profile_skipped=true&bookingFunnelSource=external_referral" target="_blank" rel="noopener">💠 Doctolib – Hénin-Beaumont</a>
+        <!-- Boutons Doctolib -->
+        <a class="bouton doctolib" href="https://www.doctolib.fr/osteopathe/dourges/christophe-bonnet-dourges/booking/places?specialityId=2271&telehealth=false&profile_skipped=true&bookingFunnelSource=external_referral" target="_blank" rel="noopener">💠 Doctolib – Hénin-Beaumont</a>
 
-        <a class="bouton" href="https://www.doctolib.fr/osteopathe/dourges/christophe-bonnet-dourges/booking/motives?specialityId=2271&telehealth=false&placeId=practice-733086&profile_skipped=true&bookingFunnelSource=external_referral" target="_blank" rel="noopener">💠 Doctolib – Dourges</a>
+        <a class="bouton doctolib" href="https://www.doctolib.fr/osteopathe/dourges/christophe-bonnet-dourges/booking/motives?specialityId=2271&telehealth=false&placeId=practice-733086&profile_skipped=true&bookingFunnelSource=external_referral" target="_blank" rel="noopener">💠 Doctolib – Dourges</a>
+
+        <br><br>
 
         <p><strong>Cabinet de consultation en semaine :</strong> 288 rue Léon Pruvost, 62110 Hénin-Beaumont</p> 
         <p><strong>Cabinet de consultation le week-end et jours fériés :</strong> 44 chemin du Puits, 62119 Dourges</p>
         <p><strong>Contact / SMS :</strong> <a href="tel:+33769565271">07 69 56 52 71</a></p>
-      </section>
-
-      <section class="experience-section">
-        <p><strong>22 ans d'expérience</strong> - Expertise Biomécanique - Examen Clinique</p>
-        <p>Prise en charge des douleurs lombaires, dorsales, cervicales, pertes de mobilité, migraines et troubles liés au sport.</p>
         <p><strong>Tarif :</strong> 60€ à 80€ selon le jour de consultation (une facture vous sera fournie pour le remboursement auprès de votre mutuelle)</p>
+        <p><strong>22 ans d'expérience - Expertise biomécanique - Examen clinique -</strong> dans la prise en charge des douleurs lombaires, dorsales, cervicales, pertes de mobilité, migraines et troubles liés au sport...</p>
       </section>
 
       <section class="formation" style="background-color: rgba(244, 233, 219, 0.9); padding: 20px 24px; border-radius: 14px; margin-top: 25px; text-align: left; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
@@ -175,19 +170,18 @@
         <p>➤ <strong>Prise en charge :</strong> adultes, enfants, adolescents et sportifs</p>
       </section>
 
-      <!-- Zones d’urgence avec puces -->
-      <div class="zones-urgence">
-        <a href="urgence-osteopathe-henin-beaumont.html">Hénin-Beaumont</a>
-        <a href="urgence-osteopathe-lens.html">Lens</a>
-        <a href="urgence-osteopathe-douai.html">Douai</a>
-        <a href="#">Dourges</a>
-        <a href="#">Carvin</a>
-        <a href="#">Noyelles-Godault</a>
-        <a href="#">Courrières</a>
-        <a href="#">Libercourt</a>
-        <a href="#">Arras</a>
-        <a href="#">Lille</a>
-        <a href="#">Liévin</a>
+      <p>
+        Le cabinet accueille également des patients venant de
+        <strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>,
+        <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>, <strong>Courrières</strong>,
+        <strong>Libercourt</strong>, <strong>Arras</strong>, <strong>Lille</strong>…
+      </p>
+
+      <!-- Boutons Appel / Itinéraire -->
+      <div class="itineraire">
+        <a class="bouton telephone" href="tel:+33769565271">📞 Appeler ou envoyer un SMS</a>
+        <a class="bouton telephone" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank" rel="noopener">🗺️ Itinéraire Google Maps</a>
+        <a class="bouton telephone" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank" rel="noopener">🚗 Itinéraire Waze</a>
       </div>
 
       <footer>
@@ -195,8 +189,14 @@
         <p>© 2025 Christophe Bonnet D.O. — Urgences ostéopathiques Dourges</p>
       </footer>
 
+      <p>
+        <strong>Zones d’urgence :</strong><br>
+        <a href="urgence-osteopathe-henin-beaumont.html">Hénin-Beaumont</a> •
+        <a href="urgence-osteopathe-lens.html">Lens</a> •
+        <a href="urgence-osteopathe-douai.html">Douai</a>
+      </p>
+
     </main>
   </div>
-
 </body>
-          </html>
+</html>
