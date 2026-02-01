@@ -24,7 +24,6 @@
       min-height: 100vh;
     }
 
-    /* FIX ALIGNEMENT */
     header {
       padding: 40px 20px 10px;
       background: rgba(255,255,255,0.25);
@@ -40,18 +39,44 @@
       text-transform: uppercase;
       line-height: 1.3;
       text-align: center;
-      color: #000000;
+      color: #000;
       font-weight: 700;
     }
 
-    .portrait {
-      width: 420px;
-      max-width: 90%;
-      height: auto;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-      margin: 20px auto;
+    /* ===== GALERIE PHOTOS ===== */
+    .galerie-photos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 20px auto 10px;
+      max-width: 1100px;
+      width: 95%;
+      flex-wrap: nowrap;
+    }
+
+    .photo-side {
+      width: 28%;
       border-radius: 12px;
-      display: block;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      object-fit: cover;
+    }
+
+    .portrait {
+      width: 34%;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      object-fit: cover;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .galerie-photos {
+        flex-wrap: wrap;
+      }
+      .photo-side, .portrait {
+        width: 90%;
+      }
     }
 
     main {
@@ -85,12 +110,6 @@
       box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
 
-    a.bouton img {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
-    }
-
     footer {
       text-align: center;
       padding: 25px 15px;
@@ -102,30 +121,6 @@
       max-width: 90%;
     }
 
-    .zones-urgence {
-      margin-top: 25px;
-    }
-
-    .zones-urgence h3 {
-      color: #7b4b2a;
-      margin-bottom: 12px;
-    }
-
-    .zones-urgence div {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .zones-urgence div span {
-      background: rgba(255,255,255,0.7);
-      padding: 6px 12px;
-      border-radius: 15px;
-      font-size: 0.95rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
     .titre-nom { font-size: 2rem; }
     .titre-profession { font-size: 1.6rem; }
     .titre-lieu { font-size: 1.4rem; }
@@ -134,21 +129,6 @@
       .titre-nom { font-size: 1.5rem; }
       .titre-profession { font-size: 1.3rem; }
       .titre-lieu { font-size: 1.1rem; }
-    }
-
-    @media (min-width: 769px) and (max-width: 1200px) {
-      .titre-nom { font-size: 1.8rem; }
-      .titre-profession { font-size: 1.5rem; }
-      .titre-lieu { font-size: 1.3rem; }
-    }
-
-    @media (max-width: 480px) {
-      .portrait { width: 100%; }
-      a.bouton { padding: 10px 16px; font-size: 0.9rem; }
-      .zones-urgence div span {
-        padding: 5px 10px;
-        font-size: 0.85rem;
-      }
     }
   </style>
 </head>
@@ -163,7 +143,12 @@
   </h1>
 </header>
 
-<img src="photo-site-urgence-osteo-dourges.png" alt="Portrait de Christophe Bonnet" class="portrait">
+<!-- ===== PHOTOS ALIGNÉES ===== -->
+<div class="galerie-photos">
+  <img src="image1.png" alt="Cabinet d'ostéopathie" class="photo-side">
+  <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait de Christophe Bonnet" class="portrait">
+  <img src="image2.png" alt="Séance d'ostéopathie" class="photo-side">
+</div>
 
 <main>
 
@@ -181,7 +166,7 @@ Rendez-vous Doctolib – Dourges
 <p><strong>Cabinet en semaine :</strong> 288 rue Léon Pruvost, 62110 Hénin-Beaumont</p>
 <p><strong>Cabinet le week-end et jours fériés :</strong> 44 chemin du Puits, 62119 Dourges</p>
 <p><strong>Contact / SMS :</strong> <a href="tel:+33769565271">07 69 56 52 71</a></p>
-<p><strong>Tarif :</strong> 60€ à 80€ selon le jour de consultation (facture fournie pour mutuelle)</p>
+<p><strong>Tarif :</strong> 60€ à 80€ selon le jour de consultation (facture fournie pour remboursement auprès de votre mutuelle)</p>
 <p><strong>22 ans d'expérience - Expertise biomécanique - Examen clinique - </strong> prise en charge des douleurs lombaires, dorsales, cervicales, pertes de mobilité, migraines et troubles sportifs.</p>
 </section>
 
@@ -190,7 +175,7 @@ Rendez-vous Doctolib – Dourges
 <p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’Institut Franco-Britannique d'Ostéopathie et de l’Institut Supérieur d'Ostéopathie du Grand Montpellier</p>
 <p>✦ <strong>Masseur-kinésithérapeute</strong> — Université Libre de Bruxelles</p>
 <p>✦ <strong>Master STAPS</strong> — Université Nice Sophia Antipolis</p>
-<p>➤ <strong>Prise en charge :</strong> adultes, enfants, adolescents, nourrissons et sportifs</p>
+<p>➤ <strong>Prise en charge :</strong> adultes, enfants, adolescents, nourrissons et sportifs</p> 
 </section>
 
 <p>
@@ -229,4 +214,3 @@ Le cabinet accueille également des patients venant de
 </main>
 </body>
 </html>
-
