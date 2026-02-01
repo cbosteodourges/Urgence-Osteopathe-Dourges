@@ -61,16 +61,29 @@
       min-height: 100vh;
     }
 
-  header {
+ header {
   padding: 40px 20px 10px;
-  background: linear-gradient(145deg, #e8d6c3, #d9c6b1);
+  background: linear-gradient(160deg, #efe2d2 0%, #e2cfb9 50%, #d7c1aa 100%);
   border-radius: 16px;
   margin: 30px auto 20px;
   max-width: 900px;
   width: 90%;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18); /* ombre plus présente */
+  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
   border: 1px solid rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
 }
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
 
 
 
@@ -265,6 +278,7 @@ Le cabinet accueille également des patients venant de
 </main>
 </body>
 </html>
+
 
 
 
