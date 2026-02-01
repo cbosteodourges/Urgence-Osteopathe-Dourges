@@ -14,7 +14,7 @@
 
   <style>
     body {
-      background-color: #f4e9db; /* beige clair */
+      background-color: #f4e9db;
       margin: 0;
       font-family: "Segoe UI", Roboto, sans-serif;
       color: #3b2f2f;
@@ -24,22 +24,23 @@
       min-height: 100vh;
     }
 
+    /* FIX ALIGNEMENT */
     header {
       padding: 40px 20px 10px;
       background: rgba(255,255,255,0.25);
       backdrop-filter: blur(1.5px);
       border-radius: 16px;
       margin: 30px auto 20px;
-      display: inline-block;
-      max-width: 90%;
+      max-width: 900px;
+      width: 90%;
     }
 
     header h1 {
-      font-size: 2rem;
       margin: 0;
       text-transform: uppercase;
-      color: #7b4b2a; /* terracotta */
-      line-height: 1.5;
+      line-height: 1.3;
+      text-align: center;
+      color: #000000;
       font-weight: 700;
     }
 
@@ -50,6 +51,7 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.25);
       margin: 20px auto;
       border-radius: 12px;
+      display: block;
     }
 
     main {
@@ -124,17 +126,25 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
+    .titre-nom { font-size: 2rem; }
+    .titre-profession { font-size: 1.6rem; }
+    .titre-lieu { font-size: 1.4rem; }
+
+    @media (max-width: 768px) {
+      .titre-nom { font-size: 1.5rem; }
+      .titre-profession { font-size: 1.3rem; }
+      .titre-lieu { font-size: 1.1rem; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .titre-nom { font-size: 1.8rem; }
+      .titre-profession { font-size: 1.5rem; }
+      .titre-lieu { font-size: 1.3rem; }
+    }
+
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .portrait {
-        width: 100%;
-      }
-      a.bouton {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-      }
+      .portrait { width: 100%; }
+      a.bouton { padding: 10px 16px; font-size: 0.9rem; }
       .zones-urgence div span {
         padding: 5px 10px;
         font-size: 0.85rem;
@@ -146,125 +156,76 @@
 <body>
 
 <header>
-  <h1 style="
-    color: #000000;
-    font-weight: 700;
-    line-height: 1.3;
-    text-transform: uppercase;
-    margin: 0;
-    text-align: center;
-  ">
+  <h1>
     <span class="titre-nom">Christophe BONNET</span><br>
     <span class="titre-profession">Ostéopathe D.O.</span><br>
     <span class="titre-lieu">Consultations sur Hénin-Beaumont et Dourges</span>
   </h1>
 </header>
 
-<style>
-  /* Responsive pour le titre */
-  .titre-nom {
-    font-size: 2rem;
-  }
+<img src="photo-site-urgence-osteo-dourges.png" alt="Portrait de Christophe Bonnet" class="portrait">
 
-  .titre-profession {
-    font-size: 1.6rem;
-  }
+<main>
 
-  .titre-lieu {
-    font-size: 1.4rem;
-  }
-
-  @media (max-width: 768px) {
-    .titre-nom {
-      font-size: 1.5rem;
-    }
-    .titre-profession {
-      font-size: 1.3rem;
-    }
-    .titre-lieu {
-      font-size: 1.1rem;
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1200px) {
-    .titre-nom {
-      font-size: 1.8rem;
-    }
-    .titre-profession {
-      font-size: 1.5rem;
-    }
-    .titre-lieu {
-      font-size: 1.3rem;
-    }
-  }
-</style>
-
-  <img src="photo-site-urgence-osteo-dourges.png" alt="Portrait de Christophe Bonnet" class="portrait">
-
-  <main>
-    <section>
-    
-      <!-- ✅ Boutons Doctolib -->
+<section>
 <a class="bouton" href="https://www.doctolib.fr/osteopathe/dourges/christophe-bonnet-dourges/booking/places?specialityId=2271&telehealth=false&profile_skipped=true&bookingFunnelSource=external_referral" target="_blank" rel="noopener">
-  Rendez-vous Doctolib – Hénin-Beaumont
+Rendez-vous Doctolib – Hénin-Beaumont
 </a>
 
 <a class="bouton" href="https://www.doctolib.fr/osteopathe/dourges/christophe-bonnet-dourges/booking/motives?specialityId=2271&telehealth=false&placeId=practice-733086&profile_skipped=true&bookingFunnelSource=external_referral" target="_blank" rel="noopener">
-  Rendez-vous Doctolib – Dourges
+Rendez-vous Doctolib – Dourges
 </a>
 
-      <br><br>
+<br><br>
 
-      <p><strong>Cabinet en semaine :</strong> 288 rue Léon Pruvost, 62110 Hénin-Beaumont</p>
-      <p><strong>Cabinet le week-end et jours fériés :</strong> 44 chemin du Puits, 62119 Dourges</p>
-      <p><strong>Contact / SMS :</strong> <a href="tel:+33769565271">07 69 56 52 71</a></p>
-      <p><strong>Tarif :</strong> 60€ à 80€ selon le jour de consultation (facture fournie pour mutuelle)</p>
-      <p><strong>22 ans d'expérience - Expertise biomécanique - Examen clinique - </strong> prise en charge des douleurs lombaires, dorsales, cervicales, pertes de mobilité, migraines et troubles sportifs.</p>
-    </section>
-
-    <section class="formation" style="background-color: rgba(244, 233, 219, 0.9); padding: 20px 24px; border-radius: 14px; margin-top: 25px; text-align: left; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
-      <h2 style="color:#7b4b2a; text-align:center; margin-bottom: 12px;">Ma formation</h2>
-      <p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’Institut Franco-Britannique d'Ostéopathie et de l’Institut Supérieur d'Ostéopathie du Grand Montpellier</p>
-      <p>✦ <strong>Masseur-kinésithérapeute</strong> — Université Libre de Bruxelles</p>
-      <p>✦ <strong>Master STAPS</strong> — Université Nice Sophia Antipolis</p>
-      <p>➤ <strong>Prise en charge :</strong> adultes, enfants, adolescents et sportifs</p>
-    </section>
-
-    <p>
-      Le cabinet accueille également des patients venant de
-      <strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>,
-      <strong>Dourges</strong>, <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>,
-      <strong>Courrières</strong>, <strong>Libercourt</strong>, <strong>Arras</strong>, <strong>Liévin</strong>, <strong>Lille</strong>…
-    </p>
-
-    <div style="margin-top:12px;">
-      <a class="bouton" href="tel:+33769565271">📞 Appeler / SMS</a>
-      <a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Google Maps</a>
-      <a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Waze</a>
-    </div>
-
-    <section style="margin-top: 20px;">
-  <strong>Zones d’urgence :</strong>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 6px;">
-    <a href="urgence-osteopathe-henin-beaumont.html">Hénin-Beaumont</a>
-    <a href="urgence-osteopathe-lens.html">Lens</a>
-    <a href="urgence-osteopathe-douai.html">Douai</a>
-    <a href="urgence-osteopathe-dourges.html">Dourges</a>
-    <a href="urgence-osteopathe-carvin.html">Carvin</a>
-    <a href="urgence-osteopathe-noyelles-godault.html">Noyelles-Godault</a>
-    <a href="urgence-osteopathe-courrieres.html">Courrières</a>
-    <a href="urgence-osteopathe-libercourt.html">Libercourt</a>
-    <a href="urgence-osteopathe-arras.html">Arras</a>
-    <a href="urgence-osteopathe-lille.html">Lille</a>
-  </div>
+<p><strong>Cabinet en semaine :</strong> 288 rue Léon Pruvost, 62110 Hénin-Beaumont</p>
+<p><strong>Cabinet le week-end et jours fériés :</strong> 44 chemin du Puits, 62119 Dourges</p>
+<p><strong>Contact / SMS :</strong> <a href="tel:+33769565271">07 69 56 52 71</a></p>
+<p><strong>Tarif :</strong> 60€ à 80€ selon le jour de consultation (facture fournie pour mutuelle)</p>
+<p><strong>22 ans d'expérience - Expertise biomécanique - Examen clinique - </strong> prise en charge des douleurs lombaires, dorsales, cervicales, pertes de mobilité, migraines et troubles sportifs.</p>
 </section>
 
-    <footer>
-      <p>© 2025 Christophe Bonnet D.O. — Urgences ostéopathiques Dourges</p>
-    </footer>
+<section class="formation" style="background-color: rgba(244, 233, 219, 0.9); padding: 20px 24px; border-radius: 14px; margin-top: 25px; text-align: left; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
+<h2 style="color:#7b4b2a; text-align:center; margin-bottom: 12px;">Ma formation</h2>
+<p>✦ <strong>Ostéopathe D.O.</strong> — Diplômé de l’Institut Franco-Britannique d'Ostéopathie et de l’Institut Supérieur d'Ostéopathie du Grand Montpellier</p>
+<p>✦ <strong>Masseur-kinésithérapeute</strong> — Université Libre de Bruxelles</p>
+<p>✦ <strong>Master STAPS</strong> — Université Nice Sophia Antipolis</p>
+<p>➤ <strong>Prise en charge :</strong> adultes, enfants, adolescents et sportifs</p>
+</section>
 
-  </main>
+<p>
+Le cabinet accueille également des patients venant de
+<strong>Hénin-Beaumont</strong>, <strong>Lens</strong>, <strong>Douai</strong>,
+<strong>Dourges</strong>, <strong>Carvin</strong>, <strong>Noyelles-Godault</strong>,
+<strong>Courrières</strong>, <strong>Libercourt</strong>, <strong>Arras</strong>, <strong>Liévin</strong>, <strong>Lille</strong>…
+</p>
+
+<div style="margin-top:12px;">
+<a class="bouton" href="tel:+33769565271">📞 Appeler / SMS</a>
+<a class="bouton" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank">🗺️ Google Maps</a>
+<a class="bouton" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank">🚗 Waze</a>
+</div>
+
+<section style="margin-top: 20px;">
+<strong>Zones d’urgence :</strong>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 6px;">
+<a href="urgence-osteopathe-henin-beaumont.html">Hénin-Beaumont</a>
+<a href="urgence-osteopathe-lens.html">Lens</a>
+<a href="urgence-osteopathe-douai.html">Douai</a>
+<a href="urgence-osteopathe-dourges.html">Dourges</a>
+<a href="urgence-osteopathe-carvin.html">Carvin</a>
+<a href="urgence-osteopathe-noyelles-godault.html">Noyelles-Godault</a>
+<a href="urgence-osteopathe-courrieres.html">Courrières</a>
+<a href="urgence-osteopathe-libercourt.html">Libercourt</a>
+<a href="urgence-osteopathe-arras.html">Arras</a>
+<a href="urgence-osteopathe-lille.html">Lille</a>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Christophe Bonnet D.O. — Urgences ostéopathiques Dourges</p>
+</footer>
+
+</main>
 </body>
 </html>
-
-
