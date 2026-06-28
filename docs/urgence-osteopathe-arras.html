@@ -164,7 +164,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* Portrait avec badge */
 .portrait-wrap { position: relative; max-width: 32rem; margin: 0 auto; }
-.portrait-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgb(0 0 0/.25); border: 1px solid rgba(133,192,176,0.3); }
+.portrait-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%; border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgb(0 0 0/.25); border: 1px solid rgba(133,192,176,0.3); }
 .portrait-badge { position: absolute; bottom: -1.25rem; left: -1.25rem; display: flex; align-items: center; gap: 0.75rem; background: #faf8f5; border-radius: 1rem; box-shadow: 0 20px 25px -5px rgb(0 0 0/.1); padding: 1rem 1.25rem; border: 1px solid #e6dac9; }
 .portrait-badge__icon { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #d9ede6; color: #2d6a60; flex-shrink: 0; }
 .portrait-badge__num { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #1f3a36; display: block; line-height: 1.2; }
@@ -300,6 +300,22 @@ svg { display: inline-block; vertical-align: middle; }
   <div class="container">
     <div class="pratique__grid">
 
+      <!-- Portrait -->
+      <div class="reveal">
+        <div class="portrait-wrap">
+          <img src="photo-site-urgence-osteo-dourges.png" alt="Christophe Bonnet, ostéopathe D.O." class="portrait-img" />
+          <div class="portrait-badge">
+            <span class="portrait-badge__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+            </span>
+            <div>
+              <span class="portrait-badge__num">7j/7</span>
+              <span class="portrait-badge__sub">Urgence &amp; jours fériés</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Colonne texte -->
       <div class="reveal">
         <span class="pratique__label">Informations pratiques</span>
@@ -348,22 +364,6 @@ svg { display: inline-block; vertical-align: middle; }
         </div>
       </div>
 
-      <!-- Portrait -->
-      <div class="reveal">
-        <div class="portrait-wrap">
-          <img src="photo-site-urgence-osteo-dourges.png" alt="Christophe Bonnet, ostéopathe D.O." class="portrait-img" />
-          <div class="portrait-badge">
-            <span class="portrait-badge__icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
-            </span>
-            <div>
-              <span class="portrait-badge__num">7j/7</span>
-              <span class="portrait-badge__sub">Urgence &amp; jours fériés</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -401,6 +401,141 @@ svg { display: inline-block; vertical-align: middle; }
       <p class="formation__note">
         <strong>Prise en charge :</strong> adultes, enfants, adolescents, nourrissons et sportifs.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRISE EN CHARGE -->
+<section style="padding:5rem 1.5rem;">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:2.5rem;">
+      <span class="label">Motifs de consultation</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:400;color:#faf8f5;font-size:clamp(1.875rem,3vw,3rem);line-height:1.1;">
+        Ce que je <em style="font-style:italic;color:#85c0b0;">prends en charge.</em>
+      </h2>
+    </div>
+    <div class="reveal" style="display:grid;gap:1.25rem;grid-template-columns:1fr;" id="pec-grid">
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Douleurs lombaires &amp; dorsales</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Lombalgie aiguë, lumbago, hernie discale, sciatique, blocage dorsal.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Cervicales &amp; migraines</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Torticolis, céphalées de tension, migraines et vertiges d'origine cervicale.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a7 7 0 0 1 7 7c0 3-1.5 5.5-4 6.8V18a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2.2C6.5 14.5 5 12 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Complexe de l'épaule</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Douleurs, blocages et limitations d'amplitude de l'épaule, tendinopathies et syndromes de la coiffe.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="12" rx="10" ry="6"/><path d="M12 6v12M6.5 9.5c1.5 1 3.5 1.5 5.5 1.5s4-.5 5.5-1.5"/><path d="M6.5 14.5c1.5-1 3.5-1.5 5.5-1.5s4 .5 5.5 1.5"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Système cranio-mandibulaire : ATM</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Douleurs de la mâchoire, craquements, blocages de l'articulation temporo-mandibulaire et troubles occlusaux.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Pertes de mobilité</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Raideurs articulaires, limitations fonctionnelles, troubles posturaux et douleurs chroniques.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="5" r="2"/><path d="M12 7v8M9 10l3-2 3 2M9 21l3-5 3 5"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Troubles sportifs</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Entorses, tendinopathies, périostites, optimisation des performances et récupération post-effort.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Nourrissons &amp; enfants</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Accompagnement pédiatrique doux : plagiocéphalie, torticolis congénital, troubles du sommeil, digestion.</p>
+      </article>
+
+      <article class="card" style="transition:transform .35s,box-shadow .35s;cursor:default;">
+        <span style="display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#f0f7f4;color:#3a8477;margin-bottom:1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+        </span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#1f3a36;margin:0 0 0.5rem;">Urgence week-end</h3>
+        <p style="font-size:0.875rem;color:#27564e;line-height:1.625;margin:0;">Disponible le samedi, dimanche et jours fériés à Dourges pour les douleurs qui ne peuvent pas attendre.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORMATIONS COMPLÉMENTAIRES -->
+<section style="padding:5rem 1.5rem;background:rgba(255,255,255,0.03);">
+  <div class="container" style="max-width:64rem;">
+    <div class="reveal" style="text-align:center;margin-bottom:2.5rem;">
+      <span class="label">Formations continues</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:400;color:#faf8f5;font-size:clamp(1.875rem,3vw,3rem);line-height:1.1;">
+        Formations <em style="font-style:italic;color:#85c0b0;">complémentaires.</em>
+      </h2>
+    </div>
+    <div class="reveal" style="display:flex;flex-direction:column;gap:0.875rem;" id="fc-list">
+
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2026</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Mécanique de l'ATM, système cranio-mandibulaire, occlusion dentaire — <em style="color:#3a8477;">CFPCO</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2026</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Lombalgie chronique de l'adulte — <em style="color:#3a8477;">Santé Formapro</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2025</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Symposium : Tissu conjonctif et matrice extracellulaire (Dr J.C. Guimberteau) — <em style="color:#3a8477;">Lille</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2025</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Prise en charge des lésions tendineuses du moyen fessier — <em style="color:#3a8477;">Santé Formapro</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2025</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Prise en charge des lésions tendineuses d'Achille — <em style="color:#3a8477;">Santé Formapro</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2024</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Traitement des lombalgies et sciatiques ; Blocking technique — <em style="color:#3a8477;">Ambroise Paré Formation</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2022</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Ostéopathie Pédiatrie et Périnatalité — <em style="color:#3a8477;">Forma Structure (Lille)</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2020</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Pédiatrie et périnatalité — <em style="color:#3a8477;">Ambroise Paré Formation</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2019</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Kinésithérapie du sport — <em style="color:#3a8477;">Ambroise Paré Formation</em></span>
+      </div>
+      <div style="background:#fff;border-radius:1rem;padding:1.25rem 1.5rem;border:1px solid #e6dac9;display:flex;align-items:baseline;gap:1.25rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:1.25rem;color:#54a390;flex-shrink:0;min-width:3rem;">2018</span>
+        <span style="font-size:0.9375rem;color:#27564e;line-height:1.6;">Complexe de l'épaule : thérapie manuelle et rééducation raisonnée — <em style="color:#3a8477;">Ambroise Paré Formation</em></span>
+      </div>
+
     </div>
   </div>
 </section>
@@ -498,7 +633,15 @@ svg { display: inline-block; vertical-align: middle; }
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Menu mobile
+  // Grille prise en charge responsive
+  const pecGrid = document.getElementById('pec-grid');
+  function updatePecGrid() {
+    if (window.innerWidth >= 1024) pecGrid.style.gridTemplateColumns = 'repeat(4,1fr)';
+    else if (window.innerWidth >= 640) pecGrid.style.gridTemplateColumns = 'repeat(2,1fr)';
+    else pecGrid.style.gridTemplateColumns = '1fr';
+  }
+  updatePecGrid();
+  window.addEventListener('resize', updatePecGrid);
   const burger = document.getElementById('burger');
   const menu = document.getElementById('mobileMenu');
   const closeBtn = document.getElementById('closeMenu');
