@@ -495,6 +495,32 @@ button { font-family: inherit; font-size: 100%; cursor: pointer; }
     * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     .reveal { opacity: 1 !important; transform: none !important; }
   }
+
+  /* Photo principale déplacée sur smartphone */
+  .hero-photo-mobile {
+    display: none !important;
+  }
+
+  @media (max-width: 767px) {
+    .hero-photo-mobile {
+      display: block !important;
+      margin: 0 0 2rem;
+    }
+
+    .hero-photo-mobile img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(116, 190, 174, 0.3);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-photo-desktop {
+      display: none !important;
+    }
+  }
+
   ::selection { background: #3a8477; color: #faf8f5; }
 </style>
 </head>
@@ -555,19 +581,18 @@ button { font-family: inherit; font-size: 100%; cursor: pointer; }
   <a href="#contact" class="mob-link mt-8 inline-flex items-center gap-2 bg-brand-400 text-brand-950 rounded-full px-7 py-3.5 font-medium">Prendre rendez-vous</a>
 </div>
 
-<div class="hero-photo-mobile">
-  <img
-    src="photo-site-urgence-osteo-dourges.png"
-    alt="Christophe Bonnet, ostéopathe D.O. à Hénin-Beaumont et Dourges"
-  />
-</div>
-  
 <!-- ============ HERO ============ -->
 <section id="accueil" class="relative min-h-screen flex items-center overflow-hidden">
   <div class="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-8 w-full py-24 lg:py-0">
     <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center">
       <div class="reveal text-sand-100">
         <span class="inline-block text-[11px] uppercase tracking-[0.32em] text-brand-300 mb-6">Christophe Bonnet · Ostéopathe D.O. — 59 / 62</span>
+        <div class="hero-photo-mobile">
+          <img
+            src="photo-site-urgence-osteo-dourges.png"
+            alt="Christophe Bonnet, ostéopathe D.O. à Hénin-Beaumont et Dourges"
+          />
+        </div>
         <h1 class="font-display font-normal text-sand-50 leading-[1.02] text-[clamp(2.5rem,6vw,4.5rem)] max-w-[15ch]">
           Comprendre votre corps pour soulager vos douleurs,
           <em class="italic text-brand-300">en urgence.</em>
