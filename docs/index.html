@@ -530,6 +530,13 @@ button { font-family: inherit; font-size: 100%; cursor: pointer; }
   ::selection { background: #3a8477; color: #faf8f5; }
 </style>
 <link rel="stylesheet" href="navigation.css?v=20260927-2" />
+<style>
+/* Actions d’accueil : rendez-vous, appel / SMS, puis itinéraires. */
+.home-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.home-actions .home-booking { grid-column:1 / -1; }
+.home-actions a { justify-content:center; min-height:48px; padding:12px 10px; text-align:center; }
+.home-actions svg { flex-shrink:0; }
+</style>
 </head>
 <body class="font-body">
 <header id="top" class="site-header"><div class="header-inner"><a href="index.html" class="site-identity">
@@ -564,15 +571,28 @@ button { font-family: inherit; font-size: 100%; cursor: pointer; }
         <p class="mt-8 text-sand-200 text-[1.125rem] leading-[1.75] max-w-xl">
           Ostéopathe D.O., Masseur-Kinésithérapeute, Master STAPS. <strong class="font-medium text-sand-50">22 ans d'expérience en expertise biomécanique &amp; examen clinique</strong>. Cabinets à Hénin-Beaumont &amp; Dourges.
         </p>
-        <div class="mt-9 flex flex-col sm:flex-row gap-4">
-          <a href="contact.html#contact" class="btn-arrow inline-flex items-center justify-center gap-2.5 bg-brand-400 text-brand-950 hover:bg-brand-300 rounded-full px-7 py-3.5 font-medium tracking-wide transition-colors shadow-lg">
+        <div class="mt-9 home-actions">
+          <a href="contact.html#contact" class="home-booking btn-arrow inline-flex items-center justify-center gap-2.5 bg-brand-400 text-brand-950 hover:bg-brand-300 rounded-full px-7 py-3.5 font-medium tracking-wide transition-colors shadow-lg">
             Prendre rendez-vous
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a href="tel:+33769565271" class="inline-flex items-center justify-center gap-2.5 border border-brand-300/50 text-sand-100 hover:bg-white/10 rounded-full px-7 py-3.5 font-medium tracking-wide transition-colors">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Appeler / SMS
+            Appeler
           </a>
+          <a href="sms:+33769565271" class="inline-flex items-center justify-center gap-2.5 border border-brand-300/50 text-sand-100 hover:bg-white/10 rounded-full px-7 py-3.5 font-medium tracking-wide transition-colors">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a3 3 0 0 1-3 3H8l-5 4V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3z"/></svg>
+            SMS
+          </a>
+
+          <a aria-label="Itinéraire Google Maps vers le cabinet de Dourges" href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-brand-400 hover:bg-brand-300 text-brand-950 rounded-full px-6 py-3 text-sm font-medium transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Google Maps
+      </a>
+          <a aria-label="Itinéraire Waze vers le cabinet de Dourges" href="https://waze.com/ul?ll=50.4406,2.9967&navigate=yes" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-brand-300/50 text-sand-100 hover:bg-white/10 rounded-full px-6 py-3 text-sm font-medium transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M5 5l2 2M19 5l-2 2M5 19l2-2M19 19l-2-2"/></svg>
+        Waze
+      </a>
         </div>
         <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-sand-300">
           <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>Cabinets en semaine &amp; week-end / jours fériés</span>
@@ -646,7 +666,11 @@ button { font-family: inherit; font-size: 100%; cursor: pointer; }
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="tel:+33769565271" class="inline-flex items-center gap-2 bg-brand-400 hover:bg-brand-300 text-brand-950 rounded-full px-6 py-3 text-sm font-medium transition-colors">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Appeler / SMS
+            Appeler
+          </a>
+          <a href="sms:+33769565271" class="inline-flex items-center gap-2 bg-brand-400 hover:bg-brand-300 text-brand-950 rounded-full px-6 py-3 text-sm font-medium transition-colors">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a3 3 0 0 1-3 3H8l-5 4V6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3z"/></svg>
+            SMS
           </a>
           <a href="https://www.google.com/maps/dir/?api=1&destination=44+Chemin+du+Puits,+62119+Dourges" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-brand-300/50 text-sand-100 hover:bg-white/10 rounded-full px-6 py-3 text-sm font-medium transition-colors">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
