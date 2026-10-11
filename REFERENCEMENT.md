@@ -1,4 +1,40 @@
-# Référencement et images — 27 septembre 2026
+# Référencement — état au 11 octobre 2026
+
+Le site publié comporte vingt pages canoniques : quatre pages principales, quatorze pages de villes (dont les deux cabinets), la page du week-end et des jours fériés et le guide d'accès. Les douze pages de provenance ont à nouveau un contenu propre ; elles figurent dans le sitemap depuis le 8 octobre. La description des redirections ci-dessous est une archive de septembre, pas l'état actuel.
+
+## Intervention du 11 octobre
+
+- Titres des douze pages de provenance : « Ostéopathe près de [ville] | Christophe Bonnet » (près d’Arras).
+- Titres des deux cabinets : « Ostéopathe à [ville] | Christophe Bonnet ».
+- Cohérence entre title, og:title, twitter:title et le nom de WebPage dans le JSON-LD.
+- Douze liens directs ajoutés depuis chaque itinéraire du guide vers la page correspondante ; libellés explicites pour les deux liens vers les cabinets.
+- Les titres du guide et de la page du week-end sont déjà descriptifs et sont conservés.
+- Descriptions distinctes, canoniques propres, robots et sitemap à vingt URL vérifiés et conservés.
+- Vérificateur actualisé pour la structure publiée, les liens vers toutes les villes et la cohérence des titres.
+
+Les quatre pages principales, les textes visibles des pages de villes, les photographies et les feuilles de style sont inchangés. Les consultations ont lieu uniquement à Hénin-Beaumont et Dourges. Aucun cabinet n'est présenté dans les douze autres villes.
+
+## Vérifications et suivi
+
+Avant intervention, les vingt pages de contenu répondaient HTTP 200 et correspondaient au dépôt. Les quatorze pages locales avaient une canonique propre, robots=index, follow, aucune meta refresh et aucun en-tête X-Robots-Tag bloquant. robots.txt permet l'exploration et désigne le sitemap. Le test contrôle également les fichiers, les ancres, les images et les données structurées.
+
+L'export Google Search Console du 11 octobre (9 juillet–8 octobre 2026) contient des impressions pour chacune des quatorze pages de villes. Cela prouve leur apparition historique dans Google, pas leur rang actuel sur une requête précise. Les tableaux Pages et Requêtes de l'export sont des agrégats séparés ; ils ne permettent pas d'attribuer chaque requête de ville à une page.
+
+L'accès automatisé à Google a répondu HTTP 429. Les réponses Bing obtenues ne fournissent pas de classement exploitable dans cet environnement. Une absence dans un résultat public ou une recherche site: ne prouve pas une désindexation. Aucun accès authentifié à Bing Webmaster Tools n'a été utilisé.
+
+Pour confirmer quelle URL répond à une ville : dans Search Console, filtrer une requête telle que « ostéopathe courrieres », puis ouvrir Pages. Pour confirmer l'indexation actuelle : Inspection de l'URL. Comparer ensuite les mêmes requêtes, pages et périodes après quelques semaines de collecte. Ces corrections ne garantissent pas une position.
+
+Vérification : `python scripts/verify_site.py`.
+Pour annuler cette intervention, rétablir ses quinze fichiers HTML depuis le parent du commit, en préservant toute modification ultérieure indépendante.
+
+Références actuelles :
+- https://developers.google.com/search/docs/appearance/title-link?hl=fr
+- https://developers.google.com/search/docs/crawling-indexing/links-crawlable?hl=fr
+- https://support.google.com/webmasters/answer/7576553?hl=fr
+
+---
+
+# Archive : référencement et images — 27 septembre 2026
 
 ## Structure
 

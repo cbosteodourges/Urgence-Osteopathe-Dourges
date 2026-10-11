@@ -97,5 +97,20 @@ for filename, (text, page) in pages.items():
 sitemap = ET.parse(DOCS / 'sitemap.xml')
 listed = {loc.text for loc in sitemap.findall('.//{*}loc')}
 assert listed == indexable, ('sitemap mismatch', listed ^ indexable)
-assert len(redirects) == 12 and len(indexable) == 8
+assert not redirects and len(indexable) == 20, ('unexpected site structure', redirects, len(indexable))
+
+# Every city page must be discoverable from the access guide.
+city_pages = {name for name in pages if name.startswith('urgence-osteopathe-')}
+assert len(city_pages) == 14, ('missing city pages', city_pages)
+hub_links = {a.get('href') for t, a in pages['acces-cabinets.html'][1].tags if t == 'a'}
+assert city_pages <= hub_links, ('access guide missing city links', city_pages - hub_links)
+for filename in city_pages:
+    text, page = pages[filename]
+    title = re.search(r'<title>(.*?)</title>', text, re.S).group(1)
+    metas = {a.get('name', a.get('property')): a.get('content') for t, a in page.tags if t == 'meta'}
+    assert title == metas['og:title'] == metas['twitter:title'], (filename, 'inconsistent titles')
+    for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', text, re.S):
+        entities = json.loads(block)['@graph']
+        web_pages = [entity for entity in entities if entity['@type'] == 'WebPage']
+        assert len(web_pages) == 1 and web_pages[0]['name'] == title, (filename, 'inconsistent WebPage name')
 print(f'OK: {len(indexable)} indexable pages, {len(redirects)} redirects, {schemas} JSON-LD blocks, {links} local references, {images} images.')
