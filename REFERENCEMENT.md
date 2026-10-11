@@ -12,7 +12,36 @@ Le site publié comporte vingt pages canoniques : quatre pages principales, quat
 - Descriptions distinctes, canoniques propres, robots et sitemap à vingt URL vérifiés et conservés.
 - Vérificateur actualisé pour la structure publiée, les liens vers toutes les villes et la cohérence des titres.
 
-Les quatre pages principales, les textes visibles des pages de villes, les photographies et les feuilles de style sont inchangés. Les consultations ont lieu uniquement à Hénin-Beaumont et Dourges. Aucun cabinet n'est présenté dans les douze autres villes.
+Les quatre pages principales, les photographies et les feuilles de style sont conservées. Les titres et résumés des pages locales sont harmonisés dans le complément ci-dessous. Les consultations ont lieu uniquement à Hénin-Beaumont et Dourges. Aucun cabinet n'est présenté dans les douze autres villes.
+
+## Complément : titres visibles et ressources locales
+
+Après validation de l’utilisateur, les quatorze grands titres visibles deviennent « Ostéopathe » suivi de la relation réelle à la ville :
+
+- « à » pour Hénin-Beaumont et Dourges, où se trouvent les cabinets ;
+- « près de » pour Carvin, Courrières, Douai, Lens, Libercourt, Liévin et Noyelles-Godault ;
+- « pour les patients de » (d’Arras) pour Arras, Béthune, Lille, Valenciennes et Villeneuve-d’Ascq.
+
+Pour ces cinq dernières villes, title, og:title, twitter:title et WebPage.name sont également harmonisés. Les douze résumés sous le titre précisent les consultations aux deux cabinets sur rendez-vous et conservent la mention de l’absence de cabinet dans la ville d’origine.
+
+Lille et Villeneuve-d’Ascq disposent désormais aussi d’un lien vers le plan officiel TER Hauts-de-France et d’une courte indication pour vérifier leurs correspondances. Le lien SNCF Connect de Béthune est remplacé par la fiche officielle TER de la gare. Le premier lien répond HTTP 403 au client de contrôle ; cela ne prouve pas une panne pour les visiteurs. La fiche de remplacement a été lue dans la recherche publique puis vérifiée HTTP 200 avec le client de contrôle. Les dix autres ressources officielles distinctes répondaient HTTP 200 lors du contrôle. Aucun trajet direct, durée ou disponibilité de consultation n’est inventé.
+
+## Informations publiques des cabinets : points à vérifier hors du site
+
+La page professionnelle Oostéo de Hénin-Beaumont, lue directement le 11 octobre, annonce encore 9 h–20 h du lundi au vendredi, contre les horaires validés de 9 h–19 h du site. Une copie d’annuaire indique les horaires 9 h–19 h en semaine et un lien de site vers Oostéo. Ses chiffres d’avis ne sont pas une mesure actuelle certifiée de Google Maps.
+
+Les annuaires utilisent l’orthographe « rue Léon Pruvot », alors que le site emploie « rue Léon Pruvost ». La Base Adresse Nationale confirme « 288 Rue Leon Pruvot 62110 Hénin-Beaumont », identifiant 62427_0700_00288. Une correction séparée est préparée pour remplacer Pruvost par Pruvot dans les vingt pages du site, y compris leurs données structurées et itinéraires. Elle attend validation car elle touche aussi les quatre pages principales à préserver. Les adresses ne sont pas modifiées lors de cette publication des titres.
+
+Le lien d’avis Google trouvé sur la copie d’annuaire contient le place ID `ChIJLxCDMD0z3UcRV0yrU88DQa0`, associé par cet annuaire au cabinet de Hénin-Beaumont. L’outil de recherche n’a pas pu lire directement la fiche Google Maps correspondante. L’audit public n’a pas permis de confirmer une fiche distincte pour Dourges. Aucun accès d’administration à Google Business Profile ou Oostéo n’a été utilisé et aucune fiche externe n’a été modifiée.
+
+Pour la fiche Google de chaque cabinet réel, vérifier la catégorie d’ostéopathe, les adresses et horaires propres au lieu, les exceptions pour les jours fériés, le lien vers la page du cabinet et son calendrier Doctolib. Pour Hénin-Beaumont, contrôler si le lien de site mène encore à Oostéo. Pour Dourges, vérifier la fiche existante avant d’envisager toute création, afin d’éviter un doublon.
+
+Sources publiques :
+- https://api-adresse.data.gouv.fr/search/?q=288+rue+L%C3%A9on+Pruvot+H%C3%A9nin-Beaumont&limit=1
+- https://oosteo.com/osteopathe-henin-beaumont-62110-honoraires-863
+- https://osteopathe.autour-de-moi.com/christophe-bonnet-2755179.html
+- https://www.ter.sncf.com/hauts-de-france/se-deplacer/gares/bethune-87342006
+- https://www.ter.sncf.com/hauts-de-france/se-deplacer/plan-des-lignes-ter
 
 ## Vérifications et suivi
 
