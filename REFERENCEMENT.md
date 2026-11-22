@@ -1,3 +1,22 @@
+# Informations professionnelles — mise à jour du 22 novembre 2026
+
+Corrections préparées sur une branche dédiée, sans déploiement ni modification de fiche Google Business Profile. Les informations ci-dessous ont été validées par Christophe Bonnet pour cette mission.
+
+- Les vingt URL canoniques, les douze pages de provenance et leur contenu local distinct sont conservés. `robots.txt`, `sitemap.xml`, photographies, CSS et scripts du site, dont le consentement et les événements Analytics, restent inchangés.
+- Hénin-Beaumont : 288 rue Léon Pruvot, 62110 Hénin-Beaumont ; tarif habituel de 60 €, sur rendez-vous. Les horaires d'ostéopathie restent à confirmer : aucun horaire fixe ni fermeture de jour férié n'est balisé pour ce cabinet. Les horaires de kinésithérapie ne sont pas repris.
+- Dourges : 44 chemin du Puits, 62119 Dourges ; mercredi et jeudi 10 h–12 h à 60 € hors jours fériés ; samedi et dimanche 10 h–12 h et 16 h–18 h à 80 €. Fermé lundi, mardi et vendredi dans la semaine habituelle. Les jours fériés constituent une exception : selon disponibilités, à 80 €, sans plage fixe inventée dans le JSON-LD.
+- Le JSON-LD de Dourges distingue les deux créneaux du samedi et du dimanche et les journées habituellement fermées. La fiche Google Business Profile distincte de Dourges est désormais confirmée par le professionnel ; aucune modification de compte ni campagne SEO n'est entreprise.
+- Les badges « 7j/7 », les anciens horaires 9 h–19 h et la répartition exclusive semaine à Hénin-Beaumont / week-end à Dourges sont corrigés dans les textes, les cartes, les métadonnées et les pieds de page.
+- La page Honoraires distingue les deux cabinets et leurs tarifs ; son bouton Hénin-Beaumont sélectionne `practice-732649`, celui de Dourges conserve `practice-733086`. Les boutons génériques de choix du lieu restent génériques. Aucun identifiant n'est inventé.
+
+Vérifications : `python scripts/verify_site.py` contrôle désormais aussi les créneaux, les tarifs, les destinations des boutons identifiés, les descriptions WebPage et les inclusions Analytics. La lecture UTF-8 est explicite pour Windows. Le test `scripts/verify_analytics.cjs` intercepte toujours toute collecte GA4 ; il bloque en outre l'action native des liens testés (appel, SMS, réservation) sans bloquer leur propagation ni retirer d'assertion de confidentialité. Les paramètres `PLAYWRIGHT_MODULE`, `CHROME_EXECUTABLE`, `GOOGLE_TAG_FIXTURE` et `ANALYTICS_SCREENSHOT` permettent de l'exécuter avec les dépendances locales.
+
+Retour arrière après une éventuelle fusion : annuler le commit de cette branche depuis une nouvelle branche et vérifier le diff avant validation. Préserver tout changement ultérieur indépendant. En l'absence de fusion et de publication, fermer la Pull Request laisse la production intacte.
+
+## Historique du 11 octobre 2026
+
+Les horaires et constats de fiches externes mentionnés ci-dessous décrivent l'état d'octobre ; ils sont remplacés par les informations professionnelles du 22 novembre ci-dessus.
+
 # Référencement — état au 11 octobre 2026
 
 Le site publié comporte vingt pages canoniques : quatre pages principales, quatorze pages de villes (dont les deux cabinets), la page du week-end et des jours fériés et le guide d'accès. Les douze pages de provenance ont à nouveau un contenu propre ; elles figurent dans le sitemap depuis le 8 octobre. La description des redirections ci-dessous est une archive de septembre, pas l'état actuel.
