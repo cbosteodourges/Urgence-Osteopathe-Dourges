@@ -23,7 +23,7 @@ const mime = {'.html':'text/html', '.js':'application/javascript', '.css':'text/
     args:['--no-sandbox']});
   let checks = 0;
   async function environment(viewport) {
-    const context = await browser.newContext({viewport: viewport || {width:390,height:844}});
+    const context = await browser.newContext({viewport: viewport || {width:390,height:844}, reducedMotion:'reduce'});
     const hits = [], loads = [], errors = [];
     await context.route('**/*', async route => {
       const request = route.request(), url = new URL(request.url());
@@ -41,6 +41,15 @@ const mime = {'.html':'text/html', '.js':'application/javascript', '.css':'text/
       } else await route.abort();
     });
     context.on('page', page => page.on('pageerror', e => errors.push(e.message)));
+    // Exercise real bubbling click handlers without opening a phone/SMS app or
+    // a booking window. External protocol dialogs otherwise swallow the next
+    // activation on recent Chrome builds. Never stop event propagation.
+    await context.addInitScript(() => {
+      document.addEventListener('click', event => {
+        const anchor = event.target.closest && event.target.closest('a[href]');
+        if (anchor && /^(tel:|sms:|https:\/\/www\.doctolib\.fr\/)/i.test(anchor.href)) event.preventDefault();
+      }, true);
+    });
     const page = await context.newPage();
     return {context,page,hits,loads,errors};
   }
@@ -53,6 +62,14 @@ const mime = {'.html':'text/html', '.js':'application/javascript', '.css':'text/
       const lines = h.body ? h.body.split('\n').map(s => new URLSearchParams(s)) : [];
       return [query, ...lines].map(p => p.get('en')).filter(Boolean);
     });
+  }
+  async function waitForEvents(hits, expected) {
+    // GA4 batches contact events; wait for the real captured payload rather than
+    // assume a fixed 1.5-second transmission delay across library versions.
+    const deadline = Date.now() + 15000;
+    while (!expected.every(name => receivedEvents(hits).includes(name)) && Date.now() < deadline) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
   }
   try {
     const e = await environment();
@@ -90,14 +107,17 @@ const mime = {'.html':'text/html', '.js':'application/javascript', '.css':'text/
     assert(e.hits.every(h => !h.url.includes('test%40') && !h.url.includes('patient-secret') && !h.body.includes('patient-secret'))); checks++;
 
     // Real button activations, including clicks on child icons, must preserve links.
+    const contactLinks = await e.page.locator('a[href^="tel:"],a[href^="sms:"],a[href*="placeId=practice-"]').evaluateAll(nodes => nodes.map(a => a.getAttribute('href')));
     await e.page.locator('a[href^="tel:"]').first().click();
     await e.page.locator('a[href^="sms:"]').first().click();
     await e.page.locator('a[href*="placeId=practice-732649"]').first().click();
     await e.page.locator('a[href*="placeId=practice-733086"]').first().click();
     await e.page.waitForTimeout(1500);
+    assert.deepEqual(await e.page.locator('a[href^="tel:"],a[href^="sms:"],a[href*="placeId=practice-"]').evaluateAll(nodes => nodes.map(a => a.getAttribute('href'))), contactLinks); checks++;
     assert.equal(await eventCount(e.page,'click_call'),1);
     assert.equal(await eventCount(e.page,'click_sms'),1);
     assert.equal(await eventCount(e.page,'click_doctolib'),2); checks += 3;
+    await waitForEvents(e.hits, ['click_call','click_sms','click_doctolib']);
     const events = receivedEvents(e.hits);
     for (const name of ['click_call','click_sms','click_doctolib']) { assert(events.includes(name), name + ' not transmitted'); checks++; }
     const cabinets = await e.page.evaluate(() => window.dataLayer.filter(x => x[0] === 'event' && x[1] === 'click_doctolib').map(x => x[2].cabinet));
