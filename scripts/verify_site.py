@@ -73,7 +73,8 @@ for filename, (text, page) in pages.items():
     visible = ' '.join(' '.join(page.text).split())
     assert not re.search(r'\b9\s*h\s*(?:à|–|-)\s*19\s*h|7\s*j\s*/\s*7|7 jours sur 7', visible, re.I), (filename, 'obsolete visible opening claim')
     assert not re.search(r'09:00|19:00', text), (filename, 'obsolete structured opening hours')
-    assert 'horaires d’ostéopathie à confirmer' in visible.lower(), (filename, 'unconfirmed Hénin hours missing')
+    assert not re.search(r'à confirmer|non confirm', text, re.I), (filename, 'internal scheduling uncertainty exposed in public content')
+    assert 'consultez les disponibilités sur doctolib ou contactez le cabinet' in visible.lower(), (filename, 'patient booking information missing')
     assert 'jours fériés selon disponibilités' in visible.lower(), (filename, 'holiday exception missing')
     if 'refresh' in metas:
         redirects.add(filename)
@@ -125,6 +126,18 @@ for filename, (text, page) in pages.items():
             assert web_pages[0]['description'] == desc, (filename, 'WebPage description differs')
             assert title == metas['og:title'] == metas['twitter:title'], (filename, 'inconsistent share titles')
         assert '08:00' not in text and '20:00' not in text, filename
+
+    # A general Dourges cabinet card covers both price bands. Only the page
+    # specifically about weekends/holidays may describe an 80 € service alone.
+    cabinet_cards = re.findall(r'<article\b[^>]*>.*?</article>', text, re.S)
+    if filename == 'prise-en-charge-honoraires.html':
+        cabinet_cards.append(text.split('>Cabinet de Dourges</span>', 1)[1].split('</section>', 1)[0])
+    for card in cabinet_cards:
+        card_text = ' '.join(' '.join(Page(card).text).split())
+        if 'Cabinet de Dourges' in card_text or (filename == 'prise-en-charge-honoraires.html' and card == cabinet_cards[-1]):
+            assert re.search(r'\b60\s*€', card_text) and re.search(r'\b80\s*€', card_text), (filename, 'Dourges cabinet card must show both prices')
+            assert all(day in card_text.lower() for day in ('mercredi', 'jeudi', 'samedi', 'dimanche')), (filename, 'Dourges price days missing')
+            assert 'hors jours fériés' in card_text.lower(), (filename, 'weekday holiday tariff exception missing')
 
     for attrs, label in page.anchors:
         url = urlsplit(attrs.get('href', ''))
